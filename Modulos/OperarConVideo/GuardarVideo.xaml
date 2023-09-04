@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GuardarVideo" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="GuardarVideo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GuardarVideo" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="789.6,1428" sap2010:WorkflowViewState.IdRef="GuardarVideo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,6 +25,17 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -49,13 +60,119 @@
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GoogleCloud.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GuardarVideo" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GuardarVideo" sap:VirtualizedContainerService.HintSize="545.6,1363.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="diahora" />
+      <Variable x:TypeArguments="x:String" Name="streamer" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="483.2,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[streamer]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">ibai</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[diahora]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[Now.ToString("dd_MM_yyyy HH_mm_ss")]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilizar Aplicación: Guardar como" sap:VirtualizedContainerService.HintSize="483.2,1079.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="969465f5-b28a-49d4-9780-b05e3668aadb" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="449.6,788" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Este equipo'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="969465f5-b28a-49d4-9780-b05e3668aadb" Text="Descargas" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvType="InputBox" DesignTimeRectangle="141, 41, 488, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'Este equipo'" Guid="9471535f-ccd6-4509-99ac-4eeeabeba8b4" InformativeScreenshot="331cf98b9ee5adc037d1b351e3f51e11.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvType="Button" DesignTimeRectangle="629, 41, 45, 42" ElementType="Button" FriendlyName="'chrome.exe Guardar como'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Nombre'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="969465f5-b28a-49d4-9780-b05e3668aadb" Text="[streamer + diahora]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="166, 450, 781, 30" CvTextArea="171, 456, 293, 17" CvTextArgument="King of spain enters the stadium - Twitch (1)" CvType="InputBox" DesignTimeRectangle="169, 455, 752, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'King of'" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="4990efff-db93-4bc7-a19f-6bb5f6ab6828" ImageBase64="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" InformativeScreenshot="9842fc6be77e06d037f326c0da8ead8c.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Nombre:" CvType="Text" DesignTimeRectangle="22, 452, 144, 28" ElementType="Text" FriendlyName="'Nombre'" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;ctrl name='Panel del explorador' role='pane' /&gt;&lt;ctrl name='Panel de diseño de carpeta' role='pane' /&gt;&lt;ctrl name='Panel de detalles' role='pane' /&gt;&lt;ctrl name='Nombre:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;ctrl name='Panel del explorador' role='pane' /&gt;&lt;ctrl name='Panel de diseño de carpeta' role='pane' /&gt;&lt;ctrl name='Panel de detalles' role='pane' /&gt;&lt;ctrl name='Nombre:' role='text' automationid='' check:text='Nombre:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJQAAAAgCAYAAAD0Z1G3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHYSURBVHhe7ZjhjcMgDEYzFfMwRxZgGHZhlmzAYSCpDc6pqcz1fnyVntQCBkt+MVG34zgyAFZAKGAKhAIm7PtegVDABJKJPhAKmAChgCkQCpgCoYApEAqYAqGAKRAKmAKhFhD9lrfN5ZDmuRRc3nycxq2hHFxI6txKINQCmlAFF3Ia5iAUeEwrZsi+SDUWFUKBx1zFjL50Kp8jm9OEqmPU0U6G+bZfzMG91vhY5lLI7oqT55w5iL1Fx0x1Px9jFZ/Hy3zY1V3P06/yEwi1AN4d6DsXZBSqFY/L0ArN19Q9WCGvgl+C3MXwLjWuab+d80KQujcXjz8UEOo7cKHGIkihqDsoBaoxL8lGKVtc71LnGBWeiTDHFEQuXahLOELLp60TZ/0ChFqAEKrAn3ohlHIlNmRhx/3UwitCyRiCxymi1HxaZxuBUF9EF6CN/X+htHzeB0ItQC1mL1bgQt29kyhX3idCTVeeEEYR6i6fB0CoBejdoReZrhBW6DbGu8L8bvOxUOKqohi+j/5upObj+75vCAehFjAL0KkFkUIR9Rqk8c4Y+6lQ418N8lxdKOKUccoHQoG/BkIBUyAUMAVCAVMgFDAFQgFTIBQwBUIBU0goAkIBUyAUMOTIP43Okout8m4kAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'unchecked'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="969465f5-b28a-49d4-9780-b05e3668aadb" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="695, 541, 111, 34" CvTextArea="721, 551, 56, 13" CvTextArgument="Guardar" CvType="Button" DesignTimeRectangle="696, 543, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' check:text='unchecked' /&gt;" Guid="40b72fe1-09c6-47b0-b3d0-4eb2f1568eb6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAlCAYAAACeVr0yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHASURBVHhe7ZZNtoMgDEbdE7thJW/GVtgKq+jYHbgDHuBPE4tVOUcbc77BHSBpbHNJaDcMQwTPByKVAJFKYCK7vxd4EMwdW1SCgVyYO7aYAvq+B4KBSCVApBIgUgkQqQSIVAJEKgEilSBXpLex6zqO9fXYCwnO/OS9ZxEoMkRnsjgbPXvuozUuBvbseiCykVK4HwjbAiKbSF2XRqj1tT1KjjPRBfIsuGhoF5c1GcvscIxdb/34Ptr93vLP+LXIxrxXI0tkuReP/Ph9kcFZsj+N60XIuDaGxkwSqZj5niYiW/LegXiRZbQtHTDvHejINTn3ImkquAskppIzUeR+G627ee9BvMgFJuqYSH4IEquCsxG+cRBqd+SpvDchS2Qp5mdXvPeOisz7tMCJSuewgm8cIi6yIe9NyBKZ2BxleyKpiEp3FSHfCr5xiNj3acl7E+JEVk99hhVxLNhHpzCRREpZ05z1gu/+2WnMewcCRY6UohY5b3iBZnmZJJCJXt1judCHRuB0QObPJYF8tLbmvR6xIsE5IFIJEKkEiFQCRCoBIpUAkUqASCUcFgmeAXPHFpVgIBfmji7Ac4FIJUCkCob4D4QiH9O4B/hiAAAAAElFTkSuQmCC" InformativeScreenshot="7101f1bcd29a6e9157be8a6ae7dd1132.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="542, 182, 960, 600" FilePath="C:\Program Files\Google\Chrome\Application\chrome.exe" IconBase64="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" InformativeScreenshot="c667f6841a27419883abc9bb3fa66bfc.png" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" Title="Guardar como" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>
