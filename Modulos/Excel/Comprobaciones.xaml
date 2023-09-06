@@ -1,15 +1,16 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Comprobaciones" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Comprobaciones" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_dataTable" Type="InArgument(sd:DataTable)" />
-    <x:Property Name="in_fila" Type="InArgument(x:Int32)" />
-    <x:Property Name="in_columnas" Type="InArgument(s:String[])" />
-    <x:Property Name="io_resultados" Type="InOutArgument(s:Boolean[])" />
-    <x:Property Name="out_datosEnFila" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_resultados" Type="OutArgument(s:Boolean[])" />
+    <x:Property Name="in_urlClipObtenido" Type="InArgument(x:String)" />
+    <x:Property Name="in_urlTablaDeDatos" Type="InArgument(x:String)" />
+    <x:Property Name="in_descargado" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_subido" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_eliminado" Type="InArgument(x:Boolean)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410.4,610.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,671.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Comprobaciones_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -95,42 +96,63 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Este módulo permitira realizar comprobación de datos en un archivo de Excel. " DisplayName="Comprobaciones" sap:VirtualizedContainerService.HintSize="548,387.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="s:String[]" Name="columnas" />
-      <Variable x:TypeArguments="s:Boolean[]" Name="resultados" />
-    </Sequence.Variables>
+  <Sequence sap2010:Annotation.AnnotationText="Este módulo permitira realizar comprobación de datos en un archivo de Excel.  Es importante tener en cuenta que éste módulo recibirá una DataTable proveniente de una DataRow, específicamente se tendrá una nueva DataTable de información de los datos a registrar mediante una filtración de una fila; Esto es, se tendrá una tabla de una sola fila, que será la fila de procesamiento actual. &#xA;&#xA;Se necesita obtener esta tabla para poder trabajar con las cabeceras por cada fila y así acceder a los distintos campos que se modificarán en el registro del archivo Excel o de la Base de Datos." DisplayName="Comprobaciones" sap:VirtualizedContainerService.HintSize="548,606.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Comprobación por columna" sap:VirtualizedContainerService.HintSize="485.6,244" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="Comprobación por columna" sap:VirtualizedContainerService.HintSize="485.6,338.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="423.2,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="423.2,226.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
         <ui:MultipleAssign.AssignOperations>
-          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
               <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="s:String[]">[columnas]</OutArgument>
+                <OutArgument x:TypeArguments="s:Boolean[]">[out_resultados]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="s:String[]">[in_columnas]</InArgument>
+                <InArgument x:TypeArguments="s:Boolean[]">[New Boolean(3){}]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
               <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="s:Boolean[]">[resultados]</OutArgument>
+                <OutArgument x:TypeArguments="x:Boolean">[out_resultados(0)]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="s:Boolean[]">[io_resultados]</InArgument>
+                <InArgument x:TypeArguments="x:Boolean">[in_urlClipObtenido.Equals(in_urlTablaDeDatos)]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:Boolean">[out_resultados(1)]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:Boolean">[in_descargado]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:Boolean">[out_resultados(2)]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:Boolean">[in_subido]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:Boolean">[out_resultados(3)]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:Boolean">[in_eliminado]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
           </scg:List>
