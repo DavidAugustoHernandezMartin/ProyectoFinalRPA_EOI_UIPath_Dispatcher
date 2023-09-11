@@ -1,9 +1,10 @@
-{
+﻿{
   "name": "ProyectoFinalRPA_EOI_UIPath_Distpacher",
   "projectId": "807da4d3-e959-4cd3-b1af-b6bb2a10ee9b",
   "description": "Proyecto Final de REFramework Distpatcher con UIPath involucrando todos los conocimientos dados en el Curso de EOI.",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Credentials.Activities": "[2.0.0]",
     "UiPath.Database.Activities": "[1.7.1]",
     "UiPath.Excel.Activities": "[2.22.0-preview]",
     "UiPath.Mail.Activities": "[1.20.3]",
