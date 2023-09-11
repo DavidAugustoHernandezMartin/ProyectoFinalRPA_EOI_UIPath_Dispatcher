@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SubirVideoAYouTube" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1063,4924" sap2010:WorkflowViewState.IdRef="SubirVideoAYouTube_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SubirVideoAYouTube" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="735,4924" sap2010:WorkflowViewState.IdRef="SubirVideoAYouTube_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -84,11 +84,7 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="SubirVideoAYouTube" sap:VirtualizedContainerService.HintSize="745,4859" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="broadcaster_name">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Rubius</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Rubius" Name="broadcaster_name" />
       <Variable x:TypeArguments="x:String" Default="Prueba" Name="title_clip" />
       <Variable x:TypeArguments="x:String" Default="Manolo" Name="creator_name" />
       <Variable x:TypeArguments="x:String" Name="DiaHora" />
@@ -396,7 +392,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7b59d9a7-30e8-4970-bef4-c765dc3ec5f1" InformativeScreenshot="a6099b0b5d9d975656cd36f3795553fa" Selector="&lt;html app='chrome.exe' title='Contenido del canal - YouTube Studio' /&gt;&lt;webctrl parentid='checkbox-label-4' tag='SPAN' aaname='Auroplay' innertext='Auroplay' visibleinnertext='Auroplay' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7b59d9a7-30e8-4970-bef4-c765dc3ec5f1" InformativeScreenshot="a6099b0b5d9d975656cd36f3795553fa" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl tag='SPAN' innertext='Auroplay' visibleinnertext='Auroplay' idx='1' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -418,7 +414,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0f9e5ae9-6f2c-4b15-afd7-765247af967f" InformativeScreenshot="e442cd59465d103b3c24e21ec2ab78c9" Selector="&lt;html app='chrome.exe' title='Contenido del canal - YouTube Studio' /&gt;&lt;webctrl parentid='checkbox-label-1' tag='SPAN' aaname='Rubius' innertext='Rubius' visibleinnertext='Rubius' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0f9e5ae9-6f2c-4b15-afd7-765247af967f" InformativeScreenshot="e442cd59465d103b3c24e21ec2ab78c9" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl tag='SPAN' idx='29' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -440,7 +436,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2d0156de-541d-4d5c-8e61-af2fb411f718" InformativeScreenshot="5e3c25b368eaba2480367a5f7d9c47dc" Selector="&lt;html app='chrome.exe' title='Contenido del canal - YouTube Studio' /&gt;&lt;webctrl parentid='checkbox-label-3' tag='SPAN' aaname='TheGrefg' innertext='TheGrefg' visibleinnertext='TheGrefg' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2d0156de-541d-4d5c-8e61-af2fb411f718" InformativeScreenshot="5e3c25b368eaba2480367a5f7d9c47dc" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl id='checkbox-label-3' tag='SPAN' innertext='TheGrefg' visibleinnertext='TheGrefg' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
