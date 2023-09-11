@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SubirVideoTikTok" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1063,5035" sap2010:WorkflowViewState.IdRef="SubirVideoTikTok_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SubirVideoTikTok" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="548,2643" sap2010:WorkflowViewState.IdRef="SubirVideoTikTok_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -60,233 +60,49 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.GoogleCloud</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SubirVideoATikTok" sap:VirtualizedContainerService.HintSize="745,4970" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="SubirVideoATikTok" sap:VirtualizedContainerService.HintSize="558,2578" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="ibai" Name="broadcaster_name" />
+      <Variable x:TypeArguments="x:String" Name="broadcaster_name">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">TheGrefg</Literal>
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Default="Prueba" Name="title_clip" />
       <Variable x:TypeArguments="x:String" Default="Manolo" Name="creator_name" />
       <Variable x:TypeArguments="x:String" Name="DiaHora" />
       <Variable x:TypeArguments="x:String" Name="UserName" />
+      <Variable x:TypeArguments="x:Boolean" Name="Subidatiktok" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Abrir Youtube Studio" sap:VirtualizedContainerService.HintSize="683,365" sap2010:WorkflowViewState.IdRef="Sequence_3">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'IMG  img'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-        <ui:Click.CursorPosition>
-          <ui:CursorPosition Position="Center">
-            <ui:CursorPosition.OffsetX>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetX>
-            <ui:CursorPosition.OffsetY>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetY>
-          </ui:CursorPosition>
-        </ui:Click.CursorPosition>
-        <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="97e2d67b-2794-4065-a56e-2f8650fc88fc" InformativeScreenshot="5c20c38be7b6cec6d8490bce31241db8" Selector="&lt;html app='chrome.exe' title='Explora: encuentra tus videos favoritos en TikTok' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;div' parentid='app-header' tag='DIV' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ui:Click.Target>
-      </ui:Click>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'YT-FORMATTED-STRING  la...'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
-        <ui:Click.CursorPosition>
-          <ui:CursorPosition Position="Center">
-            <ui:CursorPosition.OffsetX>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetX>
-            <ui:CursorPosition.OffsetY>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetY>
-          </ui:CursorPosition>
-        </ui:Click.CursorPosition>
-        <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d53c19d5-d41d-4cb4-a7ad-4c694a0c971a" InformativeScreenshot="2d565368892c7d0a77c5c7addbf47f33" Selector="&lt;html app='chrome.exe' title='YouTube' /&gt;&lt;webctrl aaname='YouTube Studio' id='label' tag='YT-FORMATTED-STRING' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ui:Click.Target>
-      </ui:Click>
-    </Sequence>
-    <Sequence DisplayName="Subida Video" sap:VirtualizedContainerService.HintSize="683,4454" sap2010:WorkflowViewState.IdRef="Sequence_8">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <Delay DisplayName="Retraso" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="621,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'YTCP-BUTTON  create-icon'" sap:VirtualizedContainerService.HintSize="621,107" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
-        <ui:Click.CursorPosition>
-          <ui:CursorPosition Position="Center">
-            <ui:CursorPosition.OffsetX>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetX>
-            <ui:CursorPosition.OffsetY>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetY>
-          </ui:CursorPosition>
-        </ui:Click.CursorPosition>
-        <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b093d3b6-8a21-4e7d-802b-8ad68687b7fc" InformativeScreenshot="3e7f5e24f2d1478223d8f3f1f0c646e4" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl id='create-icon' tag='YTCP-BUTTON' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ui:Click.Target>
-      </ui:Click>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'YTCP-VE'" sap:VirtualizedContainerService.HintSize="621,107" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
-        <ui:Click.CursorPosition>
-          <ui:CursorPosition Position="Center">
-            <ui:CursorPosition.OffsetX>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetX>
-            <ui:CursorPosition.OffsetY>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetY>
-          </ui:CursorPosition>
-        </ui:Click.CursorPosition>
-        <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="916c234c-eadf-4dea-bc7d-87ca1637a98a" InformativeScreenshot="ef3df1317efe4cd4c8cf04f60546ce44" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl parentid='text-item-0' tag='YTCP-VE' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ui:Click.Target>
-      </ui:Click>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'YTCP-BUTTON  select-fil...'" sap:VirtualizedContainerService.HintSize="621,107" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
-        <ui:Click.CursorPosition>
-          <ui:CursorPosition Position="Center">
-            <ui:CursorPosition.OffsetX>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetX>
-            <ui:CursorPosition.OffsetY>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetY>
-          </ui:CursorPosition>
-        </ui:Click.CursorPosition>
-        <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1da8c733-96be-4220-aa64-9f466a727093" InformativeScreenshot="37969945187745b9d3a71a392646e819" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl id='select-files-button' tag='YTCP-BUTTON' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ui:Click.Target>
-      </ui:Click>
-      <Sequence DisplayName="Seleccion de Video" sap:VirtualizedContainerService.HintSize="621,655" sap2010:WorkflowViewState.IdRef="Sequence_4">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <ui:GetEnvironmentVariable DisplayName="Obtener variable de entorno" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_1" Variable="UserName" VariableValue="[UserName]" />
-        <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
-          <Assign.To>
-            <OutArgument x:TypeArguments="x:String">[DiaHora]</OutArgument>
-          </Assign.To>
-          <Assign.Value>
-            <InArgument x:TypeArguments="x:String">[Now.ToString("dd_MM_yyyy")]</InArgument>
-          </Assign.Value>
-        </Assign>
-        <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Escribir en 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,155" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[&quot;C:\Users\&quot;+UserName+&quot;\Downloads\&quot;+broadcaster_name +DiaHora+&quot;.mp4&quot;]">
-          <ui:TypeInto.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6b38b145-8550-4617-bf39-931f51eb4ef5" InformativeScreenshot="203a403c51968b4a9cd714c5e6694b83" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:TypeInto.Target>
-        </ui:TypeInto>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'Button'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
-          <ui:Click.CursorPosition>
-            <ui:CursorPosition Position="Center">
-              <ui:CursorPosition.OffsetX>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetX>
-              <ui:CursorPosition.OffsetY>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetY>
-            </ui:CursorPosition>
-          </ui:Click.CursorPosition>
-          <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ac33f8f4-a21a-4c4a-8d91-f745756c73c2" InformativeScreenshot="729d120f0f019c8d898efd5504467179" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Abrir' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:Click.Target>
-        </ui:Click>
-      </Sequence>
-      <Sequence DisplayName="Datos Videos" sap:VirtualizedContainerService.HintSize="621,3077" sap2010:WorkflowViewState.IdRef="Sequence_7">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <Delay DisplayName="Retraso" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="559,90" sap2010:WorkflowViewState.IdRef="Delay_2" />
-        <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Titulo" EmptyField="True" sap:VirtualizedContainerService.HintSize="559,155" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[title_clip]">
-          <ui:TypeInto.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f349603-f40c-4c13-a174-feb8fd7487bd" InformativeScreenshot="9f2c9d2ad37e8f87e9d285d5261929f2" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl id='outer' tag='DIV' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:TypeInto.Target>
-        </ui:TypeInto>
-        <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Descripcion" EmptyField="True" sap:VirtualizedContainerService.HintSize="559,155" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[&quot;Clip de &quot;+broadcaster_name+&quot; creado por &quot;+creator_name]">
-          <ui:TypeInto.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1f4eee26-0cd2-439f-8dc3-2acd2a8cbbd4" InformativeScreenshot="28ec09c9c461c3f7753c85996cec67e4" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl css-selector='body&amp;gt;ytcp-uploads-dialog&amp;gt;tp-yt-paper-dialog&amp;gt;div&amp;gt;ytcp-animatable&amp;gt;ytcp-ve&amp;gt;ytcp-video-metadata-editor&amp;gt;div&amp;gt;ytcp-video-metadata-editor-basics&amp;gt;div&amp;gt;ytcp-video-description&amp;gt;div&amp;gt;ytcp-social-suggestions-textbox&amp;gt;ytcp-form-input-container&amp;gt;div' id='outer' tag='DIV' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:TypeInto.Target>
-        </ui:TypeInto>
-        <Sequence DisplayName="Selector de Listas" sap:VirtualizedContainerService.HintSize="559,897" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <ui:UiElementExists DisplayName="Elemento existente 'DIV'" Exists="[Subidatiktok]" sap:VirtualizedContainerService.HintSize="496,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+      <ui:UiElementExists.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4f351b3e-0fed-407e-b754-7bb4889cc26d" InformativeScreenshot="6c107dbf7dbcf75775c430acb0a23067" Selector="&lt;html app='chrome.exe' title='TikTok Creator Center' /&gt;&lt;webctrl src='https://www.tiktok.com/creator#/upload?scene=creator_center' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:UiElementExists.Target>
+    </ui:UiElementExists>
+    <If Condition="[Subidatiktok]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="496,572" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,195" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="497,107" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -298,148 +114,7 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0733fa18-055b-4d95-b3af-9f8807e11175" InformativeScreenshot="d053da8f2f427e241238db763bc88b92" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl aaname='             ' parentid='basics' tag='DIV' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
-                <ui:Target.WaitForReady>
-                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                </ui:Target.WaitForReady>
-              </ui:Target>
-            </ui:Click.Target>
-          </ui:Click>
-          <Switch x:TypeArguments="x:String" DisplayName="Cambiar" Expression="[broadcaster_name]" sap:VirtualizedContainerService.HintSize="497,492" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-            <Sequence x:Key="ibai" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_5">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
-                <ui:Click.CursorPosition>
-                  <ui:CursorPosition Position="Center">
-                    <ui:CursorPosition.OffsetX>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetX>
-                    <ui:CursorPosition.OffsetY>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetY>
-                  </ui:CursorPosition>
-                </ui:Click.CursorPosition>
-                <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="65c93dcd-8e75-4288-9cea-41005423e1b4" InformativeScreenshot="62eede4ac40423aa6c2128037c6012e4" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl parentid='checkbox-label-3' tag='SPAN' /&gt;">
-                    <ui:Target.TimeoutMS>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:Target.TimeoutMS>
-                    <ui:Target.WaitForReady>
-                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                    </ui:Target.WaitForReady>
-                  </ui:Target>
-                </ui:Click.Target>
-              </ui:Click>
-            </Sequence>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" x:Key="elxocas" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
-              <ui:Click.CursorPosition>
-                <ui:CursorPosition Position="Center">
-                  <ui:CursorPosition.OffsetX>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetX>
-                  <ui:CursorPosition.OffsetY>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetY>
-                </ui:CursorPosition>
-              </ui:Click.CursorPosition>
-              <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aa5ad77d-1266-4b54-affa-d8d101dcfef8" InformativeScreenshot="3cea10c1bd5393a8b550a7a7b6940799" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl parentid='checkbox-label-1' tag='SPAN' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:Click.Target>
-            </ui:Click>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" x:Key="auronplay" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
-              <ui:Click.CursorPosition>
-                <ui:CursorPosition Position="Center">
-                  <ui:CursorPosition.OffsetX>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetX>
-                  <ui:CursorPosition.OffsetY>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetY>
-                </ui:CursorPosition>
-              </ui:Click.CursorPosition>
-              <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7b59d9a7-30e8-4970-bef4-c765dc3ec5f1" InformativeScreenshot="a6099b0b5d9d975656cd36f3795553fa" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl parentid='checkbox-label-4' tag='SPAN' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:Click.Target>
-            </ui:Click>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" x:Key="Rubius" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
-              <ui:Click.CursorPosition>
-                <ui:CursorPosition Position="Center">
-                  <ui:CursorPosition.OffsetX>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetX>
-                  <ui:CursorPosition.OffsetY>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetY>
-                </ui:CursorPosition>
-              </ui:Click.CursorPosition>
-              <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0f9e5ae9-6f2c-4b15-afd7-765247af967f" InformativeScreenshot="e442cd59465d103b3c24e21ec2ab78c9" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl parentid='checkbox-label-2' tag='SPAN' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:Click.Target>
-            </ui:Click>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" x:Key="TheGrefg" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
-              <ui:Click.CursorPosition>
-                <ui:CursorPosition Position="Center">
-                  <ui:CursorPosition.OffsetX>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetX>
-                  <ui:CursorPosition.OffsetY>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetY>
-                </ui:CursorPosition>
-              </ui:Click.CursorPosition>
-              <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2d0156de-541d-4d5c-8e61-af2fb411f718" InformativeScreenshot="5e3c25b368eaba2480367a5f7d9c47dc" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl parentid='checkbox-label-0' tag='SPAN' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:Click.Target>
-            </ui:Click>
-          </Switch>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="497,107" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
-            <ui:Click.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
-            </ui:Click.CursorPosition>
-            <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fa0a081b-ba46-44b3-af18-263ec2eb92fb" InformativeScreenshot="49a90a4fb3ca13331d81291cceeeb710" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl aaname='Hecho' parentid='dialog' tag='DIV' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="54c00413-af83-4543-a27e-d89422c743f4" InformativeScreenshot="2e62f66dd812f49df44c95ca06e6d48e" Selector="&lt;html app='chrome.exe' title='TikTok Creator Center' /&gt;&lt;webctrl src='https://www.tiktok.com/creator#/upload?scene=creator_center' tag='IFRAME' /&gt;&lt;webctrl tag='BUTTON' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -450,165 +125,165 @@
             </ui:Click.Target>
           </ui:Click>
         </Sequence>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'TP-YT-PAPER-RADIO-BUTTON'" sap:VirtualizedContainerService.HintSize="559,107" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
-          <ui:Click.CursorPosition>
-            <ui:CursorPosition Position="Center">
-              <ui:CursorPosition.OffsetX>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetX>
-              <ui:CursorPosition.OffsetY>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetY>
-            </ui:CursorPosition>
-          </ui:Click.CursorPosition>
-          <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ced7a4f6-69bb-4755-b802-6b2665e7e981" InformativeScreenshot="f4569314cb7547cd9b7571ebd8d78367" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl name='VIDEO_MADE_FOR_KIDS_NOT_MFK' tag='TP-YT-PAPER-RADIO-BUTTON' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:Click.Target>
-        </ui:Click>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'YTCP-BUTTON  next-button'" sap:VirtualizedContainerService.HintSize="559,107" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
-          <ui:Click.CursorPosition>
-            <ui:CursorPosition Position="Center">
-              <ui:CursorPosition.OffsetX>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetX>
-              <ui:CursorPosition.OffsetY>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetY>
-            </ui:CursorPosition>
-          </ui:Click.CursorPosition>
-          <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3811d6b0-5661-4531-a4ef-70811e2d2381" InformativeScreenshot="ea8111e5ad269f2262ad58c2e49ef54c" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl id='next-button' tag='YTCP-BUTTON' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:Click.Target>
-        </ui:Click>
-        <Delay DisplayName="Retraso" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="559,90" sap2010:WorkflowViewState.IdRef="Delay_3" />
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'YTCP-BUTTON  next-button'" sap:VirtualizedContainerService.HintSize="559,107" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
-          <ui:Click.CursorPosition>
-            <ui:CursorPosition Position="Center">
-              <ui:CursorPosition.OffsetX>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetX>
-              <ui:CursorPosition.OffsetY>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetY>
-            </ui:CursorPosition>
-          </ui:Click.CursorPosition>
-          <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2a6cd963-af90-43f4-a9bf-50c81cf12d51" InformativeScreenshot="6f72dca8fc6326a5d9e72e79928793e2" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl id='next-button' tag='YTCP-BUTTON' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:Click.Target>
-        </ui:Click>
-        <Delay DisplayName="Retraso" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="559,90" sap2010:WorkflowViewState.IdRef="Delay_4" />
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'YTCP-BUTTON  next-button'" sap:VirtualizedContainerService.HintSize="559,107" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
-          <ui:Click.CursorPosition>
-            <ui:CursorPosition Position="Center">
-              <ui:CursorPosition.OffsetX>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetX>
-              <ui:CursorPosition.OffsetY>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetY>
-            </ui:CursorPosition>
-          </ui:Click.CursorPosition>
-          <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="84243727-136b-4a57-8fd6-19b0f6e400a5" InformativeScreenshot="6f72dca8fc6326a5d9e72e79928793e2" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl id='next-button' tag='YTCP-BUTTON' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:Click.Target>
-        </ui:Click>
-        <Delay DisplayName="Retraso" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="559,90" sap2010:WorkflowViewState.IdRef="Delay_5" />
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'grouping'" sap:VirtualizedContainerService.HintSize="559,107" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
-          <ui:Click.CursorPosition>
-            <ui:CursorPosition Position="Center">
-              <ui:CursorPosition.OffsetX>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetX>
-              <ui:CursorPosition.OffsetY>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetY>
-            </ui:CursorPosition>
-          </ui:Click.CursorPosition>
-          <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1b26119-a309-4b56-b71b-562bac81dd1c" InformativeScreenshot="413dae956f62d5fc98ffde57204ae866" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl name='PUBLIC' tag='TP-YT-PAPER-RADIO-BUTTON' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:Click.Target>
-        </ui:Click>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'YTCP-BUTTON  done-button'" sap:VirtualizedContainerService.HintSize="559,107" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
-          <ui:Click.CursorPosition>
-            <ui:CursorPosition Position="Center">
-              <ui:CursorPosition.OffsetX>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetX>
-              <ui:CursorPosition.OffsetY>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetY>
-            </ui:CursorPosition>
-          </ui:Click.CursorPosition>
-          <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e934c532-32ed-4dcd-a6c2-5cd238cb7d05" InformativeScreenshot="2bcee46b804b3a610df764f6abdf1ddc" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl id='done-button' tag='YTCP-BUTTON' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:Click.Target>
-        </ui:Click>
-        <Delay DisplayName="Retraso" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="559,90" sap2010:WorkflowViewState.IdRef="Delay_6" />
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="559,107" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
-          <ui:Click.CursorPosition>
-            <ui:CursorPosition Position="Center">
-              <ui:CursorPosition.OffsetX>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetX>
-              <ui:CursorPosition.OffsetY>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:CursorPosition.OffsetY>
-            </ui:CursorPosition>
-          </ui:Click.CursorPosition>
-          <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bf34c6b1-1fa7-4d8f-8d4e-4f7e0752cce7" InformativeScreenshot="8c5d821a438c643df86efc15a065d856" Selector="&lt;html app='chrome.exe' title='Panel de control del canal - YouTube Studio' /&gt;&lt;webctrl parentid='close-button' tag='DIV' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
-              <ui:Target.WaitForReady>
-                <InArgument x:TypeArguments="ui:WaitForReady" />
-              </ui:Target.WaitForReady>
-            </ui:Target>
-          </ui:Click.Target>
-        </ui:Click>
-      </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,195" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b055f53d-3a99-4570-8866-fb96a6046f47" InformativeScreenshot="6548336d653a061fc1677e981d8547b7" Selector="&lt;html app='chrome.exe' title='TikTok Creator Center' /&gt;&lt;webctrl src='https://www.tiktok.com/creator#/upload?scene=creator_center' tag='IFRAME' /&gt;&lt;webctrl tag='BUTTON' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Click.Target>
+          </ui:Click>
+        </Sequence>
+      </If.Else>
+    </If>
+    <Sequence DisplayName="Seleccion de Video" sap:VirtualizedContainerService.HintSize="496,655" sap2010:WorkflowViewState.IdRef="Sequence_9">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:GetEnvironmentVariable DisplayName="Obtener variable de entorno" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_2" Variable="UserName" VariableValue="[UserName]" />
+      <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[DiaHora]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Now.ToString("dd_MM_yyyy")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Escribir en 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,155" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[&quot;C:\Users\&quot;+UserName+&quot;\Downloads\&quot;+broadcaster_name +DiaHora+&quot;.mp4&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6b38b145-8550-4617-bf39-931f51eb4ef5" InformativeScreenshot="203a403c51968b4a9cd714c5e6694b83" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'Button'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ac33f8f4-a21a-4c4a-8d91-f745756c73c2" InformativeScreenshot="729d120f0f019c8d898efd5504467179" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Abrir' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
+    </Sequence>
+    <Sequence DisplayName="Edicion Video" sap:VirtualizedContainerService.HintSize="496,1013" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Delay DisplayName="Retraso" Duration="00:00:15" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_7" />
+      <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Escribir en 'DIV'" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[title_clip]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ad78dbe9-994c-4b26-a8b7-30a4a74f5dfc" InformativeScreenshot="e9f851387eaaa3bd33bb5ba92c998f48" Selector="&lt;html app='chrome.exe' title='TikTok Creator Center' /&gt;&lt;webctrl src='https://www.tiktok.com/creator#/upload?scene=creator_center' tag='IFRAME' /&gt;&lt;webctrl aria-label='leyenda' tag='DIV' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Enviar tecla de acceso rápido 'SPAN'" sap:VirtualizedContainerService.HintSize="388,153" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="scroll" KeyModifiers="None" SpecialKey="True">
+        <ui:SendHotkey.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="13217a52-b517-4013-a2de-3cbe36c71ccb" InformativeScreenshot="1d2c70eb9e920a317d109c86a08772eb" Selector="&lt;html app='chrome.exe' title='TikTok Creator Center' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' parentid='root' tag='DIV' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:SendHotkey.Target>
+      </ui:SendHotkey>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'BUTTON'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59d85a0b-e96f-4a8e-a837-0ef18b25e012" InformativeScreenshot="a056d8cd510c3750df64b65e32ec326c" Selector="&lt;html app='chrome.exe' title='TikTok Creator Center' /&gt;&lt;webctrl src='https://www.tiktok.com/creator#/upload?scene=creator_center' tag='IFRAME' /&gt;&lt;webctrl aaname='Publicar' parentid='root' tag='DIV' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
+      <Delay DisplayName="Retraso" Duration="00:00:15" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_9" />
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb8928b1-acfb-4b31-bea8-ab9c314ce1de" InformativeScreenshot="d45d92d95e29dd2e114b46367d9f6ed3" Selector="&lt;html app='chrome.exe' title='TikTok Creator Center' /&gt;&lt;webctrl src='https://www.tiktok.com/creator#/upload?scene=creator_center' tag='IFRAME' /&gt;&lt;webctrl aaname='Cargar otro video' parentid='root' tag='DIV' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
     </Sequence>
   </Sequence>
 </Activity>
