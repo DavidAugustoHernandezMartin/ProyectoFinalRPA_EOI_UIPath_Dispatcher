@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestApi" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="440,655" sap2010:WorkflowViewState.IdRef="TestApi_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestApi" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="440,659.2" sap2010:WorkflowViewState.IdRef="TestApi_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -73,7 +73,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestApi" sap:VirtualizedContainerService.HintSize="450,590" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestApi" sap:VirtualizedContainerService.HintSize="450,594" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="authorization" />
       <Variable x:TypeArguments="ss:SecureString" Name="clientId" />
@@ -83,9 +83,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="RPA_EOI_API_Authorization" CacheStrategy="None" DisplayName="Obtener credencial Authorization" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[authorization]" />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="RPA_EOI_API_ClientId" CacheStrategy="None" DisplayName="Obtener credencial ClientId" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[clientId]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Modulos\ApiTwitch\ApiTwitch.xaml - Invocar archivo de flujo de trabajo" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Modulos\ApiTwitch\ApiTwitch.xaml">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="RPA_EOI_API_Authorization" CacheStrategy="None" DisplayName="Obtener credencial Authorization" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="388,144.4" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[authorization]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="RPA_EOI_API_ClientId" CacheStrategy="None" DisplayName="Obtener credencial ClientId" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="388,144.4" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[clientId]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Modulos\ApiTwitch\ApiTwitch.xaml - Invocar archivo de flujo de trabajo" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Modulos\ApiTwitch\ApiTwitch.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="ss:SecureString" x:Key="in_Authorization">[authorization]</InArgument>
         <InArgument x:TypeArguments="ss:SecureString" x:Key="in_ClientId">[clientId]</InArgument>
