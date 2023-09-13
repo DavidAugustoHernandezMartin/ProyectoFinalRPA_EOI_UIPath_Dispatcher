@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LoginTikTok" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1063,9034" sap2010:WorkflowViewState.IdRef="LoginTikTok_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LoginTikTok" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1063,4721" sap2010:WorkflowViewState.IdRef="LoginTikTok_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -34,6 +34,7 @@
       <x:String>UiPath.UIAutomationNext.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -102,25 +103,40 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login TikTok" sap:VirtualizedContainerService.HintSize="752,8969" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence DisplayName="Login TikTok" sap:VirtualizedContainerService.HintSize="630,4656" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="EstadoVideoTikTok" />
+      <Variable x:TypeArguments="s:Exception" Name="ErrorVideoTikTok" />
+      <Variable x:TypeArguments="ss:SecureString" Name="correo" />
+      <Variable x:TypeArguments="ss:SecureString" Name="Password" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Utilizar Navegador Chrome: Nueva pestaña" sap:VirtualizedContainerService.HintSize="690,4110" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" ScopeGuid="ccabf475-46b6-42ce-882c-44f939de35df" Version="V2">
+    <Sequence DisplayName="Credenciales" sap:VirtualizedContainerService.HintSize="568,437" sap2010:WorkflowViewState.IdRef="Sequence_24">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="Correo" CacheStrategy="None" DisplayName="Obtener credencial" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[correo]" />
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="Password" CacheStrategy="None" DisplayName="Obtener credencial" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_4" Password="[Password]" />
+    </Sequence>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Utilizar Navegador Chrome: Nueva pestaña" sap:VirtualizedContainerService.HintSize="568,4068" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" ScopeGuid="ccabf475-46b6-42ce-882c-44f939de35df" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="558,3893" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="534,3851" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Login TikTok" sap:VirtualizedContainerService.HintSize="496,3256" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence DisplayName="Login TikTok" sap:VirtualizedContainerService.HintSize="472,3216" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <Sequence.Variables>
                 <Variable x:TypeArguments="ss:SecureString" Name="in_password" />
                 <Variable x:TypeArguments="x:Boolean" Name="InicioSesion" />
@@ -130,7 +146,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Escribir en 'editable text'" sap:VirtualizedContainerService.HintSize="434,155" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="https://www.tiktok.com/?lang=es">
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Escribir en 'editable text'" sap:VirtualizedContainerService.HintSize="410,155" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="https://www.tiktok.com/?lang=es">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1ebbc492-0d4a-4e65-89cd-69cc59120fe3" InformativeScreenshot="390eb6ee595a522877f2d6ab6fd7c836" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Nueva pestaña de Incógnito - Google Chrome' /&gt;&lt;ctrl name='Nueva pestaña de Incógnito - Google Chrome (incógnito)' role='pane' /&gt;&lt;ctrl name='Barra de direcciones y de búsqueda ' role='editable text' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -142,7 +158,7 @@
                   </ui:Target>
                 </ui:TypeInto.Target>
               </ui:TypeInto>
-              <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Enviar tecla de acceso rápido 'editable text'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Enviar tecla de acceso rápido 'editable text'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
                 <ui:SendHotkey.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cb4d63fe-cb87-4e91-9980-7065f4fce68e" InformativeScreenshot="9befdbf73f87ac6e47c77a78fbb600a6" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Nueva pestaña de Incógnito - Google Chrome' /&gt;&lt;ctrl name='Nueva pestaña de Incógnito - Google Chrome (incógnito)' role='pane' /&gt;&lt;ctrl name='Barra de direcciones y de búsqueda ' role='editable text' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -154,8 +170,8 @@
                   </ui:Target>
                 </ui:SendHotkey.Target>
               </ui:SendHotkey>
-              <Delay DisplayName="Retraso" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_11" />
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'BUTTON'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <Delay DisplayName="Retraso" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="410,90" sap2010:WorkflowViewState.IdRef="Delay_11" />
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'BUTTON'" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -177,7 +193,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -199,7 +215,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:UiElementExists DisplayName="Elemento existente 'DIV  login-modal'" Exists="[InicioSesion]" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+              <ui:UiElementExists DisplayName="Elemento existente 'DIV  login-modal'" Exists="[InicioSesion]" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3661a02f-45da-4485-9236-50960e16bb01" InformativeScreenshot="62a421762d0cdaa2c509fba9fa1546a3" Selector="&lt;html app='chrome.exe' title='TikTok - Make Your Day' /&gt;&lt;webctrl id='login-modal' tag='DIV' class='css-9fp78k-DivContentContainer e1gjoq3k3' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' innertext='Iniciar sesión en TikTokTeléfonoCorreo electrónico / nombre de usuarioCódigo QRES +34Enviar códigoIniciar sesión con contraseñaIniciar sesiónO bien continúa conAl continuar, confirmas que estás de acuerdo con los  Términos de uso de TikTok y que has leído la  Política de privacidad de TikTok.¿No tienes cuenta?  Registrarse' isleaf='0' parentclass='css-1dw2wty-DivCenterWrapper e1gjoq3k7' tabindex='0' visibleinnertext='Iniciar sesión en TikTok&amp;#xA;Teléfono&amp;#xA;Correo electrónico / nombre de usuario&amp;#xA;Código QR&amp;#xA;ES +34&amp;#xA;Enviar código&amp;#xA;Iniciar sesión con contraseña&amp;#xA;Iniciar sesión&amp;#xA;O bien continúa con&amp;#xA;&amp;#xA;Al continuar, confirmas que estás de acuerdo con los Términos de uso de TikTok y que has leído la Política de privacidad de TikTok.&amp;#xA;&amp;#xA;¿No tienes cuenta?&amp;#xA;Registrarse' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -211,15 +227,7 @@
                   </ui:Target>
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
-              <Assign DisplayName="Asignar Contraseña" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="ss:SecureString">[in_password]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="ss:SecureString">[new system.net.NetworkCredential(string.Empty,"RPAgrupo2@").SecurePassword]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <If Condition="[InicioSesion]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="434,1143" sap2010:WorkflowViewState.IdRef="If_2">
+              <If Condition="[InicioSesion]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="410,1143" sap2010:WorkflowViewState.IdRef="If_2">
                 <If.Then>
                   <Sequence sap:VirtualizedContainerService.HintSize="376,961" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
@@ -324,7 +332,8 @@
                   <Sequence sap2010:WorkflowViewState.IdRef="Sequence_13" />
                 </If.Else>
               </If>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic Iniciar sesion" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <Delay DisplayName="Retraso" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="410,90" sap2010:WorkflowViewState.IdRef="Delay_16" />
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic Iniciar sesion" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -336,7 +345,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="461d9005-d764-402c-ae5d-91c9f7aa02b1" InformativeScreenshot="284bbfa7e2be2514107fa930f465d7f4" Selector="&lt;html app='chrome.exe' title='Iniciar sesión | TikTok' /&gt;&lt;webctrl aria-role='link' tabindex='0' tag='DIV' innertext='Continuar con Google' visibleinnertext='Continuar con Google' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="461d9005-d764-402c-ae5d-91c9f7aa02b1" InformativeScreenshot="39b8dacbe3ab4e905ba7e36e9234201c" Selector="&lt;html app='chrome.exe' title='Iniciar sesión | TikTok' /&gt;&lt;webctrl aria-role='link' tag='DIV' class='css-1j4ihbo-DivBoxContainer e1cgu1qo0' innertext='Continuar con Google' parentid='loginContainer' visibleinnertext='Continuar con Google' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -346,9 +355,9 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Escribir Correo" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,155" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="twitchclipspepe@gmail.com">
-                <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d0f1ee8-f2f2-434a-83fc-129d71ee02f7" InformativeScreenshot="e4f22b2db63eaccaac8ffdedd0c85e43" Selector="&lt;html app='chrome.exe' title='Inicia sesión: Cuentas de Google' /&gt;&lt;webctrl id='identifierId' tag='INPUT' aria-label='Correo electrónico o teléfono' name='identifier' type='email' /&gt;">
+              <ui:TypeSecureText AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Escribir Texto Seguro 'INPUT  identifierId'" EmptyField="True" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="TypeSecureText_5" SecureText="[correo]">
+                <ui:TypeSecureText.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="82d5095c-04be-468b-95b7-1a8c39452f80" InformativeScreenshot="0fe4349a6d7203f10bfa25f012ecd63c" Selector="&lt;html app='chrome.exe' title='Inicia sesión: Cuentas de Google' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' idx='1' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -356,9 +365,9 @@
                       <InArgument x:TypeArguments="ui:WaitForReady" />
                     </ui:Target.WaitForReady>
                   </ui:Target>
-                </ui:TypeInto.Target>
-              </ui:TypeInto>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
+                </ui:TypeSecureText.Target>
+              </ui:TypeSecureText>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -380,8 +389,8 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <Delay DisplayName="Retraso Contraseña" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_12" />
-              <ui:TypeSecureText AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="INPUT Contraseña" EmptyField="False" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="TypeSecureText_4" SecureText="[in_password]">
+              <Delay DisplayName="Retraso Contraseña" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="410,90" sap2010:WorkflowViewState.IdRef="Delay_12" />
+              <ui:TypeSecureText AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="INPUT Contraseña" EmptyField="False" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="TypeSecureText_4" SecureText="[Password]">
                 <ui:TypeSecureText.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c4c0c6b3-ce82-46c5-b756-69507716fd64" InformativeScreenshot="d2484671b93a279c36d151585b55c782" Selector="&lt;html app='chrome.exe' title='Inicia sesión: Cuentas de Google' /&gt;&lt;webctrl tag='INPUT' type='password' aria-label='Introduce tu contraseña' name='Passwd' parentid='password' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -393,7 +402,7 @@
                   </ui:Target>
                 </ui:TypeSecureText.Target>
               </ui:TypeSecureText>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic Siguiente Contraseña" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic Siguiente Contraseña" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -416,7 +425,7 @@
                 </ui:Click.Target>
               </ui:Click>
             </Sequence>
-            <Sequence DisplayName="Cargar" sap:VirtualizedContainerService.HintSize="496,482" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <Sequence DisplayName="Cargar" sap:VirtualizedContainerService.HintSize="472,482" sap2010:WorkflowViewState.IdRef="Sequence_14">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -454,380 +463,5 @@
         <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="28fdbd7be1112ee379af0a1258601773.png" Selector="&lt;html app='chrome.exe' title='Nueva pestaña' /&gt;" Title="Nueva pestaña" Url="chrome://newtab/" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="690,4708" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="654,4629" sap2010:WorkflowViewState.IdRef="Sequence_16">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Abrir navegador Modo incognito" sap:VirtualizedContainerService.HintSize="592,4518" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.google.com/search?q=tiktok&amp;rlz=1C1YTUH_esES1057ES1057&amp;oq=tiktok&amp;gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGEAyBwgCEAAYjwIyBggDEEUYPDIGCAQQRRg8MgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMTgwN2owajSoAgCwAgA&amp;sourceid=chrome&amp;ie=UTF-8">
-            <ui:OpenBrowser.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="558,4393" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Modo incognito" sap:VirtualizedContainerService.HintSize="496,476" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximizar ventana" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-                    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Enviar tecla de acceso rápido " sap:VirtualizedContainerService.HintSize="388,153" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="n" KeyModifiers="[KeyModifiers.Ctrl OR KeyModifiers.Shift]">
-                      <ui:SendHotkey.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2164007f-1124-4526-ae25-39e187c51905" InformativeScreenshot="5bffead09498f1cdf8aadf31efac12c3" Selector="&lt;webctrl id='cnt' tag='DIV' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:SendHotkey.Target>
-                    </ui:SendHotkey>
-                    <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Cerrar ventana 'chrome.exe Nueva'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="87f6b303d5661f4fe3a5d17913052cfd" WaitForReady="INTERACTIVE" />
-                  </Sequence>
-                  <Sequence DisplayName="Login TikTok" sap:VirtualizedContainerService.HintSize="496,3248" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="ss:SecureString" Name="in_password" />
-                      <Variable x:TypeArguments="x:Boolean" Name="InicioSesion" />
-                    </Sequence.Variables>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Escribir en 'editable text'" sap:VirtualizedContainerService.HintSize="434,155" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="https://www.tiktok.com/?lang=es">
-                      <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1ebbc492-0d4a-4e65-89cd-69cc59120fe3" InformativeScreenshot="390eb6ee595a522877f2d6ab6fd7c836" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Nueva pestaña de Incógnito - Google Chrome' /&gt;&lt;ctrl name='Nueva pestaña de Incógnito - Google Chrome (incógnito)' role='pane' /&gt;&lt;ctrl name='Barra de direcciones y de búsqueda ' role='editable text' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:TypeInto.Target>
-                    </ui:TypeInto>
-                    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Enviar tecla de acceso rápido 'editable text'" sap:VirtualizedContainerService.HintSize="434,153" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
-                      <ui:SendHotkey.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cb4d63fe-cb87-4e91-9980-7065f4fce68e" InformativeScreenshot="9befdbf73f87ac6e47c77a78fbb600a6" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Nueva pestaña de Incógnito - Google Chrome' /&gt;&lt;ctrl name='Nueva pestaña de Incógnito - Google Chrome (incógnito)' role='pane' /&gt;&lt;ctrl name='Barra de direcciones y de búsqueda ' role='editable text' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:SendHotkey.Target>
-                    </ui:SendHotkey>
-                    <Delay DisplayName="Retraso" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_4" />
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'BUTTON'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5a7a1ffd-6ba6-4f92-85c5-0b6bb983b80d" InformativeScreenshot="b7e415908b10de09bcf7c08cc333aa14" Selector="&lt;html app='chrome.exe' title='Explora: encuentra tus videos favoritos en TikTok' /&gt;&lt;webctrl tag='TIKTOK-COOKIE-BANNER' /&gt;&lt;webctrl aaname='Aceptar todo' shadowhostid='' tag='BUTTON' innertext='Aceptar todo' type='button' visibleinnertext='Aceptar todo' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c769be6a-d053-4160-aa83-e92a27c83a83" InformativeScreenshot="e703d450d4a8378bb0cedd2cd1a583ce" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl id='header-login-button' tag='BUTTON' aaname='Iniciar sesión' innertext='Iniciar sesión' visibleinnertext='Iniciar sesión' type='button' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <ui:UiElementExists DisplayName="Elemento existente 'DIV  login-modal'" Exists="[InicioSesion]" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
-                      <ui:UiElementExists.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3661a02f-45da-4485-9236-50960e16bb01" InformativeScreenshot="62a421762d0cdaa2c509fba9fa1546a3" Selector="&lt;html app='chrome.exe' title='TikTok - Make Your Day' /&gt;&lt;webctrl id='login-modal' tag='DIV' class='css-9fp78k-DivContentContainer e1gjoq3k3' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' innertext='Iniciar sesión en TikTokTeléfonoCorreo electrónico / nombre de usuarioCódigo QRES +34Enviar códigoIniciar sesión con contraseñaIniciar sesiónO bien continúa conAl continuar, confirmas que estás de acuerdo con los  Términos de uso de TikTok y que has leído la  Política de privacidad de TikTok.¿No tienes cuenta?  Registrarse' isleaf='0' parentclass='css-1dw2wty-DivCenterWrapper e1gjoq3k7' tabindex='0' visibleinnertext='Iniciar sesión en TikTok&amp;#xA;Teléfono&amp;#xA;Correo electrónico / nombre de usuario&amp;#xA;Código QR&amp;#xA;ES +34&amp;#xA;Enviar código&amp;#xA;Iniciar sesión con contraseña&amp;#xA;Iniciar sesión&amp;#xA;O bien continúa con&amp;#xA;&amp;#xA;Al continuar, confirmas que estás de acuerdo con los Términos de uso de TikTok y que has leído la Política de privacidad de TikTok.&amp;#xA;&amp;#xA;¿No tienes cuenta?&amp;#xA;Registrarse' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:UiElementExists.Target>
-                    </ui:UiElementExists>
-                    <Assign DisplayName="Asignar Contraseña" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="ss:SecureString">[in_password]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="ss:SecureString">[new system.net.NetworkCredential(string.Empty,"RPAgrupo2@").SecurePassword]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <If Condition="[InicioSesion]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="434,1143" sap2010:WorkflowViewState.IdRef="If_1">
-                      <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,961" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'PATH'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
-                            <ui:Click.CursorPosition>
-                              <ui:CursorPosition Position="Center">
-                                <ui:CursorPosition.OffsetX>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetX>
-                                <ui:CursorPosition.OffsetY>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetY>
-                              </ui:CursorPosition>
-                            </ui:Click.CursorPosition>
-                            <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea284765-1c36-4e18-a5e4-557a2b24edad" InformativeScreenshot="ad2652a8dc1c570ddec0230b0bf9510b" Selector="&lt;html app='chrome.exe' title='TikTok - Make Your Day' /&gt;&lt;webctrl parentid='login-modal' tag='svg' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;svg' isleaf='0' parentclass='css-1p1vmyz-DivIconButtonListContainer e1vllrfx3' idx='1' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:Click.Target>
-                          </ui:Click>
-                          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Escribir Correo" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="twitchclipspepe@gmail.com">
-                            <ui:TypeInto.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d0f1ee8-f2f2-434a-83fc-129d71ee02f7" InformativeScreenshot="e4f22b2db63eaccaac8ffdedd0c85e43" Selector="&lt;html app='chrome.exe' title='Inicia sesión: Cuentas de Google' /&gt;&lt;webctrl id='identifierId' tag='INPUT' aria-label='Correo electrónico o teléfono' name='identifier' type='email' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:TypeInto.Target>
-                          </ui:TypeInto>
-                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
-                            <ui:Click.CursorPosition>
-                              <ui:CursorPosition Position="Center">
-                                <ui:CursorPosition.OffsetX>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetX>
-                                <ui:CursorPosition.OffsetY>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetY>
-                              </ui:CursorPosition>
-                            </ui:Click.CursorPosition>
-                            <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8e5a090-97de-42ff-905c-636177aedc92" InformativeScreenshot="ac3da2ced089bc4fe65b29e54637b769" Selector="&lt;html app='chrome.exe' title='Inicia sesión: Cuentas de Google' /&gt;&lt;webctrl parentid='identifierNext' tag='SPAN' aaname='Siguiente' innertext='Siguiente' visibleinnertext='Siguiente' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:Click.Target>
-                          </ui:Click>
-                          <Delay DisplayName="Retraso Contraseña" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Delay_5" />
-                          <ui:TypeSecureText AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="INPUT Contraseña" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="TypeSecureText_2" SecureText="[in_password]">
-                            <ui:TypeSecureText.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c4c0c6b3-ce82-46c5-b756-69507716fd64" InformativeScreenshot="d2484671b93a279c36d151585b55c782" Selector="&lt;html app='chrome.exe' title='Inicia sesión: Cuentas de Google' /&gt;&lt;webctrl tag='INPUT' type='password' aria-label='Introduce tu contraseña' name='Passwd' parentid='password' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:TypeSecureText.Target>
-                          </ui:TypeSecureText>
-                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic Siguiente Contraseña" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
-                            <ui:Click.CursorPosition>
-                              <ui:CursorPosition Position="Center">
-                                <ui:CursorPosition.OffsetX>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetX>
-                                <ui:CursorPosition.OffsetY>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetY>
-                              </ui:CursorPosition>
-                            </ui:Click.CursorPosition>
-                            <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39aec5f4-dcb8-4a1e-9db5-79fefdc2378e" InformativeScreenshot="55e557e603207af036905662f5b2a222" Selector="&lt;html app='chrome.exe' title='Inicia sesión: Cuentas de Google' /&gt;&lt;webctrl parentid='passwordNext' tag='SPAN' aaname='Siguiente' innertext='Siguiente' visibleinnertext='Siguiente' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:Click.Target>
-                          </ui:Click>
-                        </Sequence>
-                      </If.Then>
-                      <If.Else>
-                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8" />
-                      </If.Else>
-                    </If>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic Iniciar sesion" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="461d9005-d764-402c-ae5d-91c9f7aa02b1" InformativeScreenshot="284bbfa7e2be2514107fa930f465d7f4" Selector="&lt;html app='chrome.exe' title='Iniciar sesión | TikTok' /&gt;&lt;webctrl aria-role='link' tabindex='0' tag='DIV' innertext='Continuar con Google' visibleinnertext='Continuar con Google' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Escribir Correo" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,155" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="twitchclipspepe@gmail.com">
-                      <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d0f1ee8-f2f2-434a-83fc-129d71ee02f7" InformativeScreenshot="e4f22b2db63eaccaac8ffdedd0c85e43" Selector="&lt;html app='chrome.exe' title='Inicia sesión: Cuentas de Google' /&gt;&lt;webctrl id='identifierId' tag='INPUT' aria-label='Correo electrónico o teléfono' name='identifier' type='email' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:TypeInto.Target>
-                    </ui:TypeInto>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8e5a090-97de-42ff-905c-636177aedc92" InformativeScreenshot="ac3da2ced089bc4fe65b29e54637b769" Selector="&lt;html app='chrome.exe' title='Inicia sesión: Cuentas de Google' /&gt;&lt;webctrl parentid='identifierNext' tag='SPAN' aaname='Siguiente' innertext='Siguiente' visibleinnertext='Siguiente' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <Delay DisplayName="Retraso Contraseña" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_3" />
-                    <ui:TypeSecureText AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="INPUT Contraseña" EmptyField="False" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[in_password]">
-                      <ui:TypeSecureText.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c4c0c6b3-ce82-46c5-b756-69507716fd64" InformativeScreenshot="d2484671b93a279c36d151585b55c782" Selector="&lt;html app='chrome.exe' title='Inicia sesión: Cuentas de Google' /&gt;&lt;webctrl tag='INPUT' type='password' aria-label='Introduce tu contraseña' name='Passwd' parentid='password' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:TypeSecureText.Target>
-                    </ui:TypeSecureText>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic Siguiente Contraseña" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39aec5f4-dcb8-4a1e-9db5-79fefdc2378e" InformativeScreenshot="55e557e603207af036905662f5b2a222" Selector="&lt;html app='chrome.exe' title='Inicia sesión: Cuentas de Google' /&gt;&lt;webctrl parentid='passwordNext' tag='SPAN' aaname='Siguiente' innertext='Siguiente' visibleinnertext='Siguiente' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                  </Sequence>
-                  <Sequence DisplayName="Cargar" sap:VirtualizedContainerService.HintSize="496,478" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Delay DisplayName="Retraso" Duration="00:00:15" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_9" />
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'SPAN'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="332521d5-ea6e-4b79-9c87-052b117e3233" InformativeScreenshot="5c20c38be7b6cec6d8490bce31241db8" Selector="&lt;html app='chrome.exe' title='Explora: encuentra tus videos favoritos en TikTok' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;div' parentid='app-header' tag='DIV' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <Delay DisplayName="Retraso" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_10" />
-                  </Sequence>
-                </Sequence>
-              </ActivityAction>
-            </ui:OpenBrowser.Body>
-          </ui:OpenBrowser>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
   </Sequence>
 </Activity>
