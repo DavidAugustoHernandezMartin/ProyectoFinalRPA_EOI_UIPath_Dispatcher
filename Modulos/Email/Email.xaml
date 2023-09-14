@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Email" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:usau1="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Email" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:usau1="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_codigoestado" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>792,2557.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>792,2629.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Email_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -49,6 +49,8 @@
       <x:String>UiPath.Mail.SMTP.Activities</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
       <x:String>System.Net</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -108,9 +110,13 @@
       <AssemblyReference>System.Net.Requests</AssemblyReference>
       <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Email" sap:VirtualizedContainerService.HintSize="559.2,2492.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Email" sap:VirtualizedContainerService.HintSize="559.2,2564.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="cuerpo" />
       <Variable x:TypeArguments="x:String" Name="asunto" />
@@ -129,48 +135,6 @@
         <InArgument x:TypeArguments="x:String">Subido</InArgument>
       </Assign.Value>
     </Assign>
-    <Switch x:TypeArguments="x:String" DisplayName="Cambiar" Expression="[expresion]" sap:VirtualizedContainerService.HintSize="496.8,362.4" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-      <Assign x:Key="En progreso" DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[asunto]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:String">El vídeo se está subiendo a YouTube.</InArgument>
-        </Assign.Value>
-      </Assign>
-      <Assign x:Key="Subido" DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[asunto]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:String">El vídeo se ha subido correctamente a YouTube.</InArgument>
-        </Assign.Value>
-      </Assign>
-      <Assign x:Key="En revisión" DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_6">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[asunto]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:String">YouTube está revisando el vídeo para asegurarse de que cumple con las políticas de la plataforma.</InArgument>
-        </Assign.Value>
-      </Assign>
-      <Assign x:Key="Publicado " DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_7">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[asunto]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:String">El vídeo está disponible para que los usuarios lo vean.</InArgument>
-        </Assign.Value>
-      </Assign>
-      <Assign x:Key="Rechazado" DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_8">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[asunto]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:String">YouTube ha rechazado el vídeo por no cumplir con las políticas de la plataforma.</InArgument>
-        </Assign.Value>
-      </Assign>
-    </Switch>
     <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="496.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[cuerpo]</OutArgument>
@@ -179,16 +143,84 @@
         <InArgument x:TypeArguments="x:String">["ibai06/09/2023"]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="rellenar contraseña y correo electronico en pestaña inicio de sesion y completar este mismo correo en el apartado emisor De  " Body="[cuerpo]" DisplayName="Enviar mensaje de correo SMTP OUTLOOK" Email="uipathtest035@outlook.es" EnableSSL="True" From="uipathtest035@outlook.es" sap:VirtualizedContainerService.HintSize="496.8,208.8" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="False" Port="587" Result="[out_codigoestado]" SecureConnection="StartTlsWhenAvailable" Server="smtp.office365.com" Subject="[asunto]" To="uipathtest035@outlook.es">
-      <ui:SendMail.Files>
-        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-      </ui:SendMail.Files>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:SendMail>
+    <Switch x:TypeArguments="x:String" DisplayName="Cambiar" Expression="[expresion]" sap:VirtualizedContainerService.HintSize="496.8,234.4" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+      <Assign x:Key="En progreso" DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[asunto]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">El vídeo se está subiendo a YouTube.</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="Subido" DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[asunto]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">El vídeo se ha subido correctamente a YouTube.</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="En revisión" DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[asunto]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">YouTube está revisando el vídeo para asegurarse de que cumple con las políticas de la plataforma.</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="Publicado " DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[asunto]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">El vídeo está disponible para que los usuarios lo vean.</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="Rechazado" DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_8">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[asunto]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">YouTube ha rechazado el vídeo por no cumplir con las políticas de la plataforma.</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Switch>
+    <TryCatch DisplayName="Intentar capturar" sap:VirtualizedContainerService.HintSize="496.8,408.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="rellenar contraseña y correo electronico en pestaña inicio de sesion y completar este mismo correo en el apartado emisor De  " Body="[cuerpo]" DisplayName="Enviar mensaje de correo SMTP OUTLOOK" Email="uipathtest035@outlook.es" EnableSSL="True" From="uipathtest035@outlook.es" sap:VirtualizedContainerService.HintSize="333.6,208.8" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="False" Port="587" Result="[out_codigoestado]" SecureConnection="StartTlsWhenAvailable" Server="smtp.office365.com" Subject="[asunto]" To="uipathtest035@outlook.es">
+          <ui:SendMail.Files>
+            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+          </ui:SendMail.Files>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:SendMail>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,244" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="NoMail" />
+            </ActivityAction.Argument>
+            <ui:LogMessage sap2010:Annotation.AnnotationText="1 reintento" DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="334.4,173.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;El mail NO se ha enviado correctamente&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
     <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="496.8,723.2" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="449.6,644.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -197,7 +229,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uga:SendEmailConnections ArgumentAttachments="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" AttachmentInputMode="UseExisting" Body="[cuerpo]" ConnectionId="78f09c3d-eec9-4134-8f93-e421d8474f1b" DisplayName="Enviar correo electrónico" sap:VirtualizedContainerService.HintSize="387.2,532.8" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="[UiPath.GSuite.Activities.Gmail.Enums.MailImportance.High]" SaveAsDraft="False" Subject="[asunto]" To="[New String(){&quot;uipathtest035@gmail.com&quot;}]" UseConnectionService="True">
+          <uga:SendEmailConnections ArgumentAttachments="{x:Null}" ConnectionAccountName="{x:Null}" AttachmentInputMode="UseExisting" Attachments="{x:Null}" Bcc="{x:Null}" Body="[cuerpo]" Cc="{x:Null}" ConnectionId="78f09c3d-eec9-4134-8f93-e421d8474f1b" DisplayName="Enviar correo electrónico" sap:VirtualizedContainerService.HintSize="387.2,532.8" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="[UiPath.GSuite.Activities.Gmail.Enums.MailImportance.High]" ReplyTo="{x:Null}" SaveAsDraft="False" SingleAttachment="{x:Null}" Subject="[asunto]" To="[New String(){&quot;uipathtest035@gmail.com&quot;}]" UseConnectionService="True">
             <uga:SendEmailConnections.AttachmentsBackup>
               <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
                 <usau:BackupSlot.BackupValues>
