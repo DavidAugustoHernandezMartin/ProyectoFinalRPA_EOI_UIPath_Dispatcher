@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SubirVideoAYouTube" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1063,4389" sap2010:WorkflowViewState.IdRef="SubirVideoAYouTube_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SubirVideoAYouTube" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1063,4388" sap2010:WorkflowViewState.IdRef="SubirVideoAYouTube_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -83,11 +83,11 @@
       <AssemblyReference>UiPath.GoogleCloud</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SubirVideoAYouTube" sap:VirtualizedContainerService.HintSize="745,4324" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SubirVideoAYouTube" sap:VirtualizedContainerService.HintSize="745,4323" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="broadcaster_name">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">TheGrefg</Literal>
+          <Literal x:TypeArguments="x:String">Rubius</Literal>
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Default="Prueba" Name="title_clip" />
@@ -100,7 +100,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Subida Video" sap:VirtualizedContainerService.HintSize="683,4213" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Subida Video" sap:VirtualizedContainerService.HintSize="683,4212" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -172,14 +172,14 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
-      <Sequence DisplayName="Seleccion de Video" sap:VirtualizedContainerService.HintSize="621,655" sap2010:WorkflowViewState.IdRef="Sequence_13">
+      <Sequence DisplayName="Seleccion de Video" sap:VirtualizedContainerService.HintSize="621,654" sap2010:WorkflowViewState.IdRef="Sequence_13">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <ui:GetEnvironmentVariable DisplayName="Obtener variable de entorno" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_1" Variable="UserName" VariableValue="[UserName]" />
-        <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_2">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[DiaHora]</OutArgument>
           </Assign.To>
