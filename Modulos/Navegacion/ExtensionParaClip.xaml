@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>485.6,784</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1186,711</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtensionParaClip_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -117,7 +117,7 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="extension para clip" sap:VirtualizedContainerService.HintSize="496,719.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="extension para clip" sap:VirtualizedContainerService.HintSize="500,646" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="streamer" />
       <Variable x:TypeArguments="x:String" Name="diahora" />
@@ -128,7 +128,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="433.6,164" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="438,163" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -158,35 +158,35 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <TryCatch DisplayName="Intentar capturar" sap:VirtualizedContainerService.HintSize="433.6,403.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Intentar capturar" sap:VirtualizedContainerService.HintSize="438,332" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilizar Navegador Chrome: King of spain enters the stadium - Twitch" sap:VirtualizedContainerService.HintSize="756,3524" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="21bdc40b-e7d1-4e00-a3ff-84bee2561295" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilizar Navegador Chrome: King of spain enters the stadium - Twitch" sap:VirtualizedContainerService.HintSize="757,3517" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="21bdc40b-e7d1-4e00-a3ff-84bee2561295" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="722.4,3307.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="723,3300" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximizar ventana" sap:VirtualizedContainerService.HintSize="660,24.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-                <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="660,3128.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximizar ventana" sap:VirtualizedContainerService.HintSize="661,25" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="661,3120" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Delay DisplayName="Retraso" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="597.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_5" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Video Downloader'" sap:VirtualizedContainerService.HintSize="597.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="21bdc40b-e7d1-4e00-a3ff-84bee2561295" Version="V3">
+                  <Delay DisplayName="Retraso" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="599,90" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Video Downloader'" sap:VirtualizedContainerService.HintSize="599,157" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="21bdc40b-e7d1-4e00-a3ff-84bee2561295" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="1644, 60, 35, 36" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Video Downloader'" FullSelectorArgument="&lt;ctrl name='Ibai Meets Messi on Livestream For The First Time - Twitch - Goo*' role='pane' /&gt;&lt;ctrl name='Video Downloader Professional Tiene acceso a este sitio web' role='menu button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Ibai Meets Messi on Livestream For The First Time - Twitch - Goo*' role='pane' /&gt;&lt;ctrl name='Video Downloader Professional Tiene acceso a este sitio web' role='menu button' automationid='' check:text='Video Downloader Professional&amp;#xA;Tiene acceso a este sitio web' /&gt;" Guid="0c5c76b4-541b-4eb5-ae57-98def6112ed5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAoCAYAAAB99ePgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATKSURBVFhH7ZjbS5tnHMdTPESNyRvfnI/Qm0Jv1ArSw1W96EVHD39B51XpbsesxuQ9xSTISpmuVAcl24WDXtRddF3bMYQ2lso2PNKD1pZRhlU7GYVRdZ6S737v8+YtZUxNUjtC8QtfnsOb35OPv+f3PLzGgCJWccPNzMygWG1YWVlBsXq35grVhwm3kd7A2sYa1tPrm1p9rn6uUH14mVtaXcKNqRtQUgpiqZjmQfJdrZ9IJRBPxRFNRXHr6S0sry1nI/NTXnDpdJq10wvTOHzlMAwXDDAk3nI861jWnQY0fdOEZ38+Y3F6fK7KC06vn+GZYezv3g+jbIQlboE5boYlZmHm4hxqEjXgO3mYO8xo6G3A6Owoi8u3/vKD29AWH30xitpLtSgRSlApVaJKqYJJMaFK1lpz1AwuxrFxY28jxufGWZwen6sKytzY7BjqLtWhVCh9A6S7WqmGJUoZ7ODYuLGnERNzEyzuvWZufWOdtaMzo6j7sg7lQjlMMkGRq6VqmBXaXsUCq2JFTUcNzLIZB3sPYmJWg9Pjc1VOcJlMhlldXG3Vba3vqocxbIRZNDNbJMqWxDEwPsrDFrWBkzkcunwI47Pjb+LVQ6H2c1FemdP1YO4BGrobUBGugEWkg0BmYBJlTK5hYPaoHVbZiiOXj+Dxy8fZyPyUE9z8X/O48/QOrj+8jtRvKfQM9WDfhX0wRUzgRI6ZgUl0SmUedsUOh+Jg/bov6pD8NYn7z+/j9tRtDD0fwsLiQnblrbUlnF7AyV+SsESolgiAF3lwAqeNBStzjUBQNG8TKWMSgUkOOGUnXLILbsUNb4cXgVgA3qgX/g4/+kb62LrpzNb33pZw+qU58WICJ5InsKdtD8rOl8EUMsHSTnARAosQmEBgAoGJBCYSmJQFk93M6lh9VtFagVPJUxif0a6W7Wov55qb/mMaZ749A4/kgbXdCnvEDj5MUGEbs0MgKJGgRIKS3OxzbsGNYDSIoByEPcTj5JWTmJyfzK64vfI6EK+WXqFzoBNcG9VYyApnhDISpmyFCYz6LoHACMgjeuAVaQtFP3zU2tp5lrGR34fZOjt+WvUFl1aWkPgpAWurlb7UBlfEpYFR6xE0KJ/oQ0AOICAF4CT401+fxuTLhyxe1Xu5SvQDsry6jNiPMfBtPBwhB7wRL9xhyliE4KgflIIICAG4Wm1o/q4Zw5+3AGfPYuPaNdA/B2yNXJQXnCr9r15cWUT0ZhT8eR7udqqtSBC+iA9BMQh/2A93yInmfgL7+DjgciFTVoa00wlcvAisrrI1tlPecKp0wNd/v4ZyUwHfwsPX7sNeaS+D9ITc+Oir4xjp/BTgOPoWA9JGI2tRWwvcu8fi6TrQ2k1UEJwq/ZpRa1D6QQL/GY9gOAh3iwtN3U0Ym6PXpHPnkC4pQaayEigvB6qqAL8fuHqVxdJritZuooLhVOmAagaF7wWUflKKA7EDSE3dZfPp/n6ks5nL6Jk7ehSYzF4n2xyMd4JT9fYW9/3ch9STFBur8+nFRaCrC6iv1zJ27BgwMMCe56J3hlP176tBHetzGbX4Bwe1rXz0iM3lqh2B05XP61Au2lG4TaXWplr8eYL/P3AFaheuUBX373P/9YtisXi35gpVEcMB/wDvJf7HxIgvwwAAAABJRU5ErkJggg==" InformativeScreenshot="9e96c2ab29a50eb9e0513c6fc27cd6be.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Ibai Meets Messi on Livestream For The First Time - Twitch - Goo*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <Delay DisplayName="Retraso" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="597.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Download 43.66MB'" sap:VirtualizedContainerService.HintSize="597.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="21bdc40b-e7d1-4e00-a3ff-84bee2561295" Version="V3">
+                  <Delay DisplayName="Retraso" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="599,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Download 43.66MB'" sap:VirtualizedContainerService.HintSize="599,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="21bdc40b-e7d1-4e00-a3ff-84bee2561295" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="325, 91, 56, 29" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Download 43.66MB'" FullSelectorArgument="&lt;ctrl name='Download 43.66MB' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Download' role='text' automationid='' check:fulltext='Download' /&gt;" Guid="0c5544d5-2665-44bd-bfe8-a9450d08c086" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAdCAYAAAD/56+bAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJdSURBVFhH7VY7bsMwDO2deoUeLlvWHCNTtlwgS4AcwIB3T8mSTRV/EklJqdo4KByYAAFb4uc9Uqb88bn5Cu+sK8Gl60pw6VoSPJ7DNTi5n8PW282o2/EWwnSo7v1OD2EIt3A65rUGQWu0n15L8t8JFo6XkToLwsAMSNiXgmC8Mew3u3C6hzBM2Xe4UDxLEHKJgB/Z+JN1HXdsT3FRYuw/EmRwAMjs0zomS0QAcEwUk6FNIstAdEG4CJmgiudtLod8glQBtQ0V/lmCujtRMzjpMthGotEO7GGfAFvwBUgTg/OqouV3FvR1MWc5ok2C9K0OsdIDvEOc6RwBSKznCOIcELLJdyaCZsiYfZsAuxUJ0Xvcm+Jz6kAPwTKe2AAGWdd4tA3G7CPoRAKIYiAW7p72leGBQNJ+D0Gwgy6IqOOpcg5j7qzERekaMm+mK8Gl60qQlD58GR7mw46S153qgeUGFY19EvHHYRMlDSJjy8OjZwgq7SIoYAwQmXo43dS0S2rvJIhR9QfAeprCNWMAy1TVBPWkpGK3ivwzQSCAF3YjiBr3xbq+QpICIDvKRYk45HLXgx7/8xKE6kGyWpB8TJvEERhLKgIRHOJPgIj4S2d1t+lZnYbKEfVHWutDgjnRoyr575MUwVb/YsjeXPhsl45u6r4U2BMsO9gi+YAgAfFSkmwkAJDq6OJ3jKBdsRTgRFCIGaItgtovr4l2DRkPCgImQpWEpAqUK4IBVOtgfIaC5P/al3RQq6s6v4vkda68+CF4FlNh7Z/BlsRlzxN0UhtyrJ0El6srwaXrmxP8Ct/gtVbEf1+SSwAAAABJRU5ErkJggg==" InformativeScreenshot="8fdd9b28f39f131d423486cbe7ea9e32.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -197,8 +197,8 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <Delay DisplayName="Retraso" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="597.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                  <ui:UiElementExists DisplayName="Elemento existente 'chrome.exe Video'" Exists="[elementexist]" sap:VirtualizedContainerService.HintSize="597.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <Delay DisplayName="Retraso" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="599,90" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <ui:UiElementExists DisplayName="Elemento existente 'chrome.exe Video'" Exists="[elementexist]" sap:VirtualizedContainerService.HintSize="599,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                     <ui:UiElementExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="da892a8e-cbce-492f-96d1-7ca613392734" InformativeScreenshot="42abaf738fcaf97f1e7712e48badea3e">
                         <ui:Target.TimeoutMS>
@@ -210,27 +210,27 @@
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <Delay DisplayName="Retraso" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="597.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
-                  <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="597.6,700" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                  <Delay DisplayName="Retraso" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="599,90" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                  <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="599,695" sap2010:WorkflowViewState.IdRef="CommentOut_4">
                     <ui:CommentOut.Body>
-                      <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="562.4,621.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                      <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="563,616" sap2010:WorkflowViewState.IdRef="Sequence_21">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:IfElseIf sap2010:Annotation.AnnotationText="en el caso de la primera ejecucion&#xA;" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="500,509.6" sap2010:WorkflowViewState.IdRef="IfElseIf_5">
+                        <ui:IfElseIf sap2010:Annotation.AnnotationText="en el caso de la primera ejecucion&#xA;" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="501,505" sap2010:WorkflowViewState.IdRef="IfElseIf_5">
                           <ui:IfElseIf.ConditionBlocks>
                             <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                               <ui:IfElseIfBlock BlockType="If" Condition="[elementexist]">
                                 <ui:IfElseIfBlock.Then>
-                                  <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="449.6,269.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                  <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Aceptar'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="21bdc40b-e7d1-4e00-a3ff-84bee2561295" Version="V3">
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Aceptar'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="21bdc40b-e7d1-4e00-a3ff-84bee2561295" Version="V3">
                                       <uix:NClick.Target>
                                         <uix:TargetAnchorable CvElementArea="340, 182, 102, 45" CvTextArea="362, 195, 57, 18" CvTextArgument="Aceptar" CvType="Button" DesignTimeRectangle="342, 182, 100, 41" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Aceptar'" FullSelectorArgument="&lt;ctrl name='Video Downloader Professional' role='dialog' /&gt;&lt;ctrl name='Aceptar' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Video Downloader Professional' role='dialog' /&gt;&lt;ctrl name='Aceptar' role='push button' automationid='' check:fulltext='Aceptar' /&gt;" Guid="0d572ca9-6071-4dd7-a3e2-c4e09cc81775" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAtCAYAAABCiS5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUPSURBVHhe7ZvdayNVGMb9O7xT9MKPS8mVl71QLxTtglDwQlDIhVChQv1YemPLruBi12pdwrJst0ipVSxSt67rFos2QkjLYqNFk8VYInTazWeTmWQmmcfzno+ZSXfERZpk1p4HHsqZ98ycyfnNOeedmc590Iq0NKCIKxSQ2XLx0y0bF75v4P1vDrV76PPf1XH91yZKDVf2fre6ADkdYPp6HQ+O7+H+Me1++/WFKkr1blBdgJ6evh26o3b//OhpA7vFtiQSAHTm6qFX6bVPK7i568CyZVCrp8oabT5zqf5/7qOijEhATtvFA3Jae/PzKg8spky8fKmM4dmSdg89kijhPINj2i6+uml5kLb+FKODA9pkBRX4bc/BpR8bXlm7P351rsyBPD5h8DIlaCQOKLHuA7Ec4KWLZa+s3R8/9JbBgTwzXeTlVy4LYBwQpXuqIomGnipr98+kFz4WgOgvSQOKkEkaUIRN0oAibJIGFGGTNKAIm6QBRdgkDSjCJmlAETYpAoD2MVfgzQBFC8OhdU6mSYMHNNlAhrdCamN1NqROjz213UbFbmNjOTw+KJMGDiiWcngbmbx4Wmvs9P+53yJ/7NXRgO50Ecu8XRuJsboYSdUm4kfqxZYsZKodigqZLVZfxIZYLGvK7XBRMSyMT8p9JfzsVg1rRfVm0sVuro4Rvn8NG96+UuzYEyw2mrJhmP7bTKvI2kzI46r9TBtrBXFelVxNxo7PpMECmrWwSw0YJmJsLRJXchtrC4E6CRNZPrg6yOYsLG9ZSLPOWqTYcgsVFrGqrLxSxcy2I8qFOjsei0tAlt2Bkad9mx7M3S364UVMJNnx+CsvF9kdVidZ4+vgoiHam1lix91pw6IqhYY4bgBshbUVVxfEMZs0UEDDbO4nZVP7vKymO2On4tVJ8ATCRfqGqONbJRc25rwO2g+MSFZWgPISGFldFIGE5N+nODVixOjyATlY7BEcMmmAgMpY41duIDFQnXe0I7xy0P5VfKdYx1EdNcWlQvYLHDMM0NCSiY0CJQ+uGD2kuzqv4zNpcIAWmhCvpMLERswK1bsLQCyWmC8j3uUShqjOfwWkzs10sLbVwNR8HemufU4AoFE2r5MqBbGueM6L7VaeFl21LoVNP/+wZgUdMmV6nc/XPbHtaBtxeW4eWHUrcJIA8R9InTt/JKamObuFGVaOyUQA7D4lQ4t4IEmIrdti+mGx9HYDc2zBX805bLGXGZUERJ3PEwAvSehe0yZyMhNjF8vqjomzau2idlJsqlMZ4EkCxDs29MmBSr3ZvdG62Day7mdfpApLxad43X3Eky0aDJ4sk91w3hA/ypviGLyMqsMyukyy7CcN5EQgzo49PlZiCYhK61lazuB2AzkBgPri0DXo3jFJA4qwSRpQhE36fwO6x03SgCJskgYUYZM0oAibpAFF2CQNKMImhQI6963/8RDp1Cca0CBMel4COsUGCYkD+mLT/3Bor9rB6ELVK2v3x7HJAw7kyTMHvPzGZ+JDOg6IPtpSFa/90kQ6b+OR00dfmGn30hd/aKBsul75SlI8LOSASM9+KIbWE+/u49aBePye+ctBMtfS7qE32WBoOi6H8+IFsbQ8NmGgIv8/wgP0+17bo0emr+wmV8K/7dc+Pp+9eoj4lYr36SN5Ke290/UBkb7+ucnpBUFp99fnrtUlDaEuQKSa5eK91UOeRTz8tobVDz/1wW2882UNf9wWS4sv4G+ttL0TpvshaQAAAABJRU5ErkJggg==" InformativeScreenshot="68fb7d34b65282288eee858fea16a27c.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Video Downloader Professional' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
                                       </uix:NClick.Target>
@@ -249,19 +249,19 @@
                       </Sequence>
                     </ui:CommentOut.Body>
                   </ui:CommentOut>
-                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilizar Aplicación: Guardar como" sap:VirtualizedContainerService.HintSize="597.6,1211.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="8acbb5e4-7476-433c-a1c6-a740a1928f03" Version="V2">
+                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilizar Aplicación: Guardar como" sap:VirtualizedContainerService.HintSize="599,1209" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="8acbb5e4-7476-433c-a1c6-a740a1928f03" Version="V2">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="449.6,920" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,918" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Este equipo'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="HardwareEvents" ScopeIdentifier="8acbb5e4-7476-433c-a1c6-a740a1928f03" Text="Descargas" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Este equipo'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="HardwareEvents" ScopeIdentifier="8acbb5e4-7476-433c-a1c6-a740a1928f03" Text="Descargas" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable CvType="InputBox" DesignTimeRectangle="140, 42, 488, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'Este equipo'" Guid="e89f09ba-d049-4a26-9fe0-49eaa058ec67" ImageBase64="" InformativeScreenshot="130f2cc712c29c0f773b886282ac5bac.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -275,7 +275,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Nombre'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="HardwareEvents" ScopeIdentifier="8acbb5e4-7476-433c-a1c6-a740a1928f03" Text="[streamer + diahora]" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Nombre'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="HardwareEvents" ScopeIdentifier="8acbb5e4-7476-433c-a1c6-a740a1928f03" Text="[streamer + diahora]" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable CvElementArea="166, 450, 781, 30" CvTextArea="171, 456, 293, 17" CvTextArgument="King of spain enters the stadium - Twitch (1)" CvType="InputBox" DesignTimeRectangle="169, 455, 752, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'King of'" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="4990efff-db93-4bc7-a19f-6bb5f6ab6828" ImageBase64="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" InformativeScreenshot="9842fc6be77e06d037f326c0da8ead8c.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -286,12 +286,12 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'unchecked'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8acbb5e4-7476-433c-a1c6-a740a1928f03" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'unchecked'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8acbb5e4-7476-433c-a1c6-a740a1928f03" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable CvElementArea="695, 541, 111, 34" CvTextArea="721, 551, 56, 13" CvTextArgument="Guardar" CvType="Button" DesignTimeRectangle="696, 543, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' check:text='unchecked' /&gt;" Guid="40b72fe1-09c6-47b0-b3d0-4eb2f1568eb6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAlCAYAAACeVr0yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHASURBVHhe7ZZNtoMgDEbdE7thJW/GVtgKq+jYHbgDHuBPE4tVOUcbc77BHSBpbHNJaDcMQwTPByKVAJFKYCK7vxd4EMwdW1SCgVyYO7aYAvq+B4KBSCVApBIgUgkQqQSIVAJEKgEilSBXpLex6zqO9fXYCwnO/OS9ZxEoMkRnsjgbPXvuozUuBvbseiCykVK4HwjbAiKbSF2XRqj1tT1KjjPRBfIsuGhoF5c1GcvscIxdb/34Ptr93vLP+LXIxrxXI0tkuReP/Ph9kcFZsj+N60XIuDaGxkwSqZj5niYiW/LegXiRZbQtHTDvHejINTn3ImkquAskppIzUeR+G627ee9BvMgFJuqYSH4IEquCsxG+cRBqd+SpvDchS2Qp5mdXvPeOisz7tMCJSuewgm8cIi6yIe9NyBKZ2BxleyKpiEp3FSHfCr5xiNj3acl7E+JEVk99hhVxLNhHpzCRREpZ05z1gu/+2WnMewcCRY6UohY5b3iBZnmZJJCJXt1judCHRuB0QObPJYF8tLbmvR6xIsE5IFIJEKkEiFQCRCoBIpUAkUqASCUcFgmeAXPHFpVgIBfmji7Ac4FIJUCkCob4D4QiH9O4B/hiAAAAAElFTkSuQmCC" InformativeScreenshot="7101f1bcd29a6e9157be8a6ae7dd1132.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <Delay DisplayName="Retraso" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_6" />
+                          <Delay DisplayName="Retraso" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_6" />
                         </Sequence>
                       </ActivityAction>
                     </uix:NApplicationCard.Body>
@@ -309,7 +309,7 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -320,7 +320,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <WriteLine sap2010:Annotation.AnnotationText="End process" DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="334.4,121.6" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Se ha encontrado un ploblema desconocido">
+            <WriteLine sap2010:Annotation.AnnotationText="End process" DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Se ha encontrado un ploblema desconocido">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -331,7 +331,7 @@
             </WriteLine>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="uue:NodeNotFoundException" sap:VirtualizedContainerService.HintSize="400,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="uue:NodeNotFoundException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -342,7 +342,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="uue:NodeNotFoundException" Name="exception" />
             </ActivityAction.Argument>
-            <WriteLine sap2010:Annotation.AnnotationText="1 reintento" DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="334.4,121.6" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="No se ha podido encontrar algún elemento de UI o selector">
+            <WriteLine sap2010:Annotation.AnnotationText="1 reintento" DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="No se ha podido encontrar algún elemento de UI o selector">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -351,10 +351,10 @@
             </WriteLine>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="uue:ApplicationOpenException" sap:VirtualizedContainerService.HintSize="400,192" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+        <Catch x:TypeArguments="uue:ApplicationOpenException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -362,7 +362,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="uue:ApplicationOpenException" Name="exception" />
             </ActivityAction.Argument>
-            <WriteLine sap2010:Annotation.AnnotationText="1 reintento" DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="334.4,121.6" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="No se ha podido encontrar la aplicación o navegador/ventana">
+            <WriteLine sap2010:Annotation.AnnotationText="1 reintento" DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="334,121" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="No se ha podido encontrar la aplicación o navegador/ventana">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -372,9 +372,6 @@
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
-      <TryCatch.Finally>
-        <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Cerrar ventana 'chrome.exe King'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="CloseWindow_4" InformativeScreenshot="11191c1f4cc5372598bfdfaa104b552f" Selector="&lt;html app='chrome.exe' url='https://clips.twitch.tv/*' /&gt;" WaitForReady="INTERACTIVE" />
-      </TryCatch.Finally>
     </TryCatch>
   </Sequence>
 </Activity>
