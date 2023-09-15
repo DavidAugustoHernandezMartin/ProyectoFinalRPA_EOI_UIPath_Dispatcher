@@ -1,4 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LoginYouTube" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="LoginYouTube_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LoginYouTube" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Correo" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="in_Password" Type="InArgument(ss:SecureString)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1186,2756</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>LoginYouTube_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,15 +34,30 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
@@ -42,20 +66,253 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GoogleCloud</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoginYouTube" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login Youtube" sap:VirtualizedContainerService.HintSize="608,2691" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:Exception" Name="ErrorLoginYoutube" />
+      <Variable x:TypeArguments="x:Boolean" Name="EstadoLoginYoutube" />
+      <Variable x:TypeArguments="ss:SecureString" Name="Correo" />
+      <Variable x:TypeArguments="ss:SecureString" Name="Password" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Registrar mensaje START LoginYoutube" sap:VirtualizedContainerService.HintSize="546,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Inicio módulo LoginYoutube&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Utilizar Navegador Chrome: Nueva pestaña" sap:VirtualizedContainerService.HintSize="546,2218" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" ScopeGuid="c855a5d7-4f96-4252-92ad-1c35f6244901" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Abrir Youtube" sap:VirtualizedContainerService.HintSize="512,2001" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Login youtube" sap:VirtualizedContainerService.HintSize="450,1347" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Delay DisplayName="Retraso" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_5" />
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'DIV'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c769be6a-d053-4160-aa83-e92a27c83a83" InformativeScreenshot="4bca7eedacf02825692cbfe7a72b1a91" Selector="&lt;html app='chrome.exe' title='YouTube' /&gt;&lt;webctrl class='yt-spec-touch-feedback-shape__fill' idx='2' parentid='content' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <Delay DisplayName="Retraso" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_6" />
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic Iniciar sesion" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="461d9005-d764-402c-ae5d-91c9f7aa02b1" InformativeScreenshot="871cbe1c919f323b4ea5bfeac12083f6" Selector="&lt;html app='chrome.exe' title='YouTube' /&gt;&lt;webctrl class='yt-spec-touch-feedback-shape__fill' parentid='buttons' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:TypeSecureText AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="INPUT Correo" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="TypeSecureText_5" SecureText="[in_Correo]">
+                <ui:TypeSecureText.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c4c0c6b3-ce82-46c5-b756-69507716fd64" InformativeScreenshot="a37d543b63caca0eff2e7042d6ec5514" Selector="&lt;webctrl id='identifierId' tag='INPUT' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeSecureText.Target>
+              </ui:TypeSecureText>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic Sifuiente Correo" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9360d104-c4cd-4986-a27d-691dfc5776c5" InformativeScreenshot="baeddf991a860202dfe401a32c74bd61" Selector="&lt;html app='chrome.exe' title='YouTube' /&gt;&lt;webctrl parentid='identifierNext' tag='SPAN' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <Delay DisplayName="Retraso Contraseña" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_7" />
+              <ui:TypeSecureText AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="INPUT Contraseña" EmptyField="False" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="TypeSecureText_4" SecureText="[in_Password]">
+                <ui:TypeSecureText.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c4c0c6b3-ce82-46c5-b756-69507716fd64" InformativeScreenshot="c796a83bec42166207576b4f2e18099f" Selector="&lt;html app='chrome.exe' title='YouTube' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' isleaf='1' parentid='password' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeSecureText.Target>
+              </ui:TypeSecureText>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic Siguiente Contraseña" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39aec5f4-dcb8-4a1e-9db5-79fefdc2378e" InformativeScreenshot="d207b8182a356b0e1bf613a98353e12d" Selector="&lt;html app='chrome.exe' title='YouTube' /&gt;&lt;webctrl class='VfPpkd-RLmnJb' parentid='passwordNext' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+            </Sequence>
+            <Sequence DisplayName="Abrir Youtube Studio" sap:VirtualizedContainerService.HintSize="450,499" sap2010:WorkflowViewState.IdRef="Sequence_18">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'IMG  img'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="97e2d67b-2794-4065-a56e-2f8650fc88fc" InformativeScreenshot="a4ec20b0d0851a706171269b0ec1d6c8" Selector="&lt;html app='chrome.exe' title='YouTube' /&gt;&lt;webctrl id='img' tag='IMG' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic 'YT-FORMATTED-STRING  la...'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d53c19d5-d41d-4cb4-a7ad-4c694a0c971a" InformativeScreenshot="2d565368892c7d0a77c5c7addbf47f33" Selector="&lt;html app='chrome.exe' title='YouTube' /&gt;&lt;webctrl aaname='YouTube Studio' id='label' tag='YT-FORMATTED-STRING' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <Delay DisplayName="Retraso" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_8" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="97f3a2e74ddd29b89e6eb0e7aa1dcf71.png" Selector="&lt;html app='chrome.exe' url='https://www.youtube.com/' /&gt;" Title="Nueva pestaña" Url="https://www.youtube.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Registrar mensaje END LoginYoutube" sap:VirtualizedContainerService.HintSize="546,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Fin módulo LoginYoutube&quot;]" />
   </Sequence>
 </Activity>
