@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <Activity mc:Ignorable="sap sap2010" x:Class="Comprobaciones" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,784" sap2010:WorkflowViewState.IdRef="Comprobaciones_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+=======
+<Activity mc:Ignorable="sap sap2010" x:Class="Comprobaciones" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1114.4,784" sap2010:WorkflowViewState.IdRef="Comprobaciones_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -105,9 +109,13 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ConexionConBaseDeDatos.xaml - Invocar archivo de flujo de trabajo" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Modulos\BaseDeDatos\ConexionConBaseDeDatos.xaml">
       <ui:InvokeWorkflowFile.Arguments>
+<<<<<<< HEAD
         <OutArgument x:TypeArguments="ui:DatabaseConnection" x:Key="out_conexionBaseDeDatos">
           <VisualBasicReference x:TypeArguments="ui:DatabaseConnection" ExpressionText="database" />
         </OutArgument>
+=======
+        <OutArgument x:TypeArguments="ui:DatabaseConnection" x:Key="out_conexionBaseDeDatos">[database]</OutArgument>
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel.xaml - Invocar archivo de flujo de trabajo" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Modulos\Excel\Excel.xaml">
@@ -122,10 +130,19 @@
           <Literal x:TypeArguments="x:String">Canales</Literal>
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_rango">
+<<<<<<< HEAD
           <Literal x:TypeArguments="x:String">A1:L2</Literal>
         </InArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dataTable" />
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dataTable" />
+=======
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_dataRow" />
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dataTable">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="datatable" />
+        </OutArgument>
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -133,7 +150,11 @@
         <OutArgument x:TypeArguments="sd:DataRow">[datarow]</OutArgument>
       </Assign.To>
       <Assign.Value>
+<<<<<<< HEAD
         <InArgument x:TypeArguments="sd:DataRow">[datatable(3)]</InArgument>
+=======
+        <InArgument x:TypeArguments="sd:DataRow">[datatable(2)]</InArgument>
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
       </Assign.Value>
     </Assign>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ManipularDatosEnBaseDeDatos.xaml - Invocar archivo de flujo de trabajo" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Modulos\BaseDeDatos\ManipularDatosEnBaseDeDatos.xaml">
@@ -142,10 +163,21 @@
           <Literal x:TypeArguments="x:Boolean" />
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_clip_url">
+<<<<<<< HEAD
           <Literal x:TypeArguments="x:String">https://www.twitch.tv/auronplay/clip/UninterestedSarcasticDolphinPoooound</Literal>
         </InArgument>
         <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="io_database" />
         <InArgument x:TypeArguments="sd:DataRow" x:Key="in_datarow" />
+=======
+          <Literal x:TypeArguments="x:String">'https://www.twitch.tv/auronplay/clip/UninterestedSarcasticDolphinPoooound'</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="io_database">
+          <VisualBasicValue x:TypeArguments="ui:DatabaseConnection" ExpressionText="database" />
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_datarow">
+          <VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="datarow" />
+        </InArgument>
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:DatabaseDisconnect DatabaseConnection="[database]" DisplayName="Desconectarse de la base de datos" sap:VirtualizedContainerService.HintSize="433.6,24.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />

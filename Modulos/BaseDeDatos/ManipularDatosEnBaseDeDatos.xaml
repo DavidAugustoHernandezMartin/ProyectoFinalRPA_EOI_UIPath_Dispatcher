@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <Activity mc:Ignorable="sap sap2010" x:Class="ManipularDatosEnBaseDeDatos" this:ManipularDatosEnBaseDeDatos.in_operacion="True" this:ManipularDatosEnBaseDeDatos.in_clip_url="https://www.twitch.tv/auronplay/clip/UninterestedSarcasticDolphinPoooound" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+=======
+<Activity mc:Ignorable="sap sap2010" x:Class="ManipularDatosEnBaseDeDatos" this:ManipularDatosEnBaseDeDatos.in_operacion="True" this:ManipularDatosEnBaseDeDatos.in_clip_url="https://www.twitch.tv/auronplay/clip/loooo" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
   <x:Members>
     <x:Property Name="in_operacion" Type="InArgument(x:Boolean)" />
     <x:Property Name="in_clip_url" Type="InArgument(x:String)" />
@@ -8,7 +12,11 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
+<<<<<<< HEAD
   <sap:VirtualizedContainerService.HintSize>1410.4,4224</sap:VirtualizedContainerService.HintSize>
+=======
+  <sap:VirtualizedContainerService.HintSize>1114.4,4393.6</sap:VirtualizedContainerService.HintSize>
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
   <sap2010:WorkflowViewState.IdRef>ManipularDatosEnBaseDeDatos_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -49,6 +57,7 @@
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+<<<<<<< HEAD
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
@@ -62,10 +71,17 @@
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
       <AssemblyReference>System.Console</AssemblyReference>
+=======
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+<<<<<<< HEAD
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
@@ -106,11 +122,77 @@
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Aquí se realizarán las operaciones de INSERT y UPDATE en las tablas de la base de datos especificada en el argumento in_database." DisplayName="ManipularDatosEnBaseDeDatos" sap:VirtualizedContainerService.HintSize="748.8,4159.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+=======
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.GoogleCloud</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="Aquí se realizarán las operaciones de INSERT y UPDATE en las tablas de la base de datos especificada en el argumento in_database." DisplayName="ManipularDatosEnBaseDeDatos" sap:VirtualizedContainerService.HintSize="702.4,4328.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="querySELECT" />
       <Variable x:TypeArguments="x:Int32" Name="reintentos" />
       <Variable x:TypeArguments="si:IOException" Name="excepcion" />
       <Variable x:TypeArguments="sd:DataTable" Name="urlEnbaseDeDatos" />
+<<<<<<< HEAD
+=======
+      <Variable x:TypeArguments="x:Int32" Name="registrosAffectados" />
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -118,6 +200,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+<<<<<<< HEAD
     <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="686.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Inicio de variables para las transacciones SQL &quot;]" />
     <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="686.4,164" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
@@ -131,6 +214,12 @@
 WHERE url_clip = '"+in_clip_url+"';"]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
+=======
+    <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="640,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Inicio de variables para las transacciones SQL &quot;]" />
+    <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="640,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:Int32">[reintentos]</OutArgument>
@@ -150,27 +239,49 @@ WHERE url_clip = '"+in_clip_url+"';"]</InArgument>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
+<<<<<<< HEAD
     <Sequence DisplayName="Verificacion de argumentos" sap:VirtualizedContainerService.HintSize="686.4,1714.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+=======
+    <Sequence DisplayName="Verificacion de argumentos" sap:VirtualizedContainerService.HintSize="640,1716" sap2010:WorkflowViewState.IdRef="Sequence_2">
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+<<<<<<< HEAD
       <While DisplayName="Mientras" sap:VirtualizedContainerService.HintSize="577.6,834.4" sap2010:WorkflowViewState.IdRef="While_1" Condition="[reintentos &lt; 3]">
         <TryCatch DisplayName="Intentar capturar posible error de conexion" sap:VirtualizedContainerService.HintSize="532.8,675.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
           <TryCatch.Try>
             <Sequence DisplayName="Intento de extraccion de clip_url desde base de datos" sap:VirtualizedContainerService.HintSize="496,444" sap2010:WorkflowViewState.IdRef="Sequence_9">
+=======
+      <While DisplayName="Mientras" sap:VirtualizedContainerService.HintSize="577.6,836" sap2010:WorkflowViewState.IdRef="While_1" Condition="[reintentos &lt; 3]">
+        <TryCatch DisplayName="Intentar capturar posible error de conexion" sap:VirtualizedContainerService.HintSize="532.8,676" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch.Try>
+            <Sequence DisplayName="Intento de extraccion de clip_url desde base de datos" sap:VirtualizedContainerService.HintSize="496,444.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+<<<<<<< HEAD
               <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[urlEnbaseDeDatos]" DisplayName="Ejecutar consulta" ExistingDbConnection="[io_database]" sap:VirtualizedContainerService.HintSize="433.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="[querySELECT]">
                 <ui:ExecuteQuery.Parameters>
                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                 </ui:ExecuteQuery.Parameters>
               </ui:ExecuteQuery>
               <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_3">
+=======
+              <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[urlEnbaseDeDatos]" DisplayName="Ejecutar consulta" ExistingDbConnection="[io_database]" sap:VirtualizedContainerService.HintSize="433.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="SELECT url_clip FROM  auronplay WHERE url_clip = @p1 ;">
+                <ui:ExecuteQuery.Parameters>
+                  <InArgument x:TypeArguments="x:String" x:Key="p1">
+                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_clip_url" />
+                  </InArgument>
+                </ui:ExecuteQuery.Parameters>
+              </ui:ExecuteQuery>
+              <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[reintentos]</OutArgument>
                 </Assign.To>
@@ -249,17 +360,28 @@ WHERE url_clip = '"+in_clip_url+"';"]</InArgument>
       </If>
       <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="577.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Verificación de argumentos para conexión SQL exitosa&quot;]" />
     </Sequence>
+<<<<<<< HEAD
     <Sequence sap2010:Annotation.AnnotationText="Aquí se verificará si la operación indicada es compatible con la información de la base de datos. Si in_operacion es True se interpretará como INSERT, y si in_operacion es False se interpretará como UPDATE. &#xA;&#xA;Debido a ésto, si in_operacion es True la URL a insertar no debe existir, y si in_operacion es false la URL  a modificar debe existir. Cualquier otro caso será interpretado como InvalidArgumentException." DisplayName="Comprobacion de operacion valida" sap:VirtualizedContainerService.HintSize="686.4,960.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+=======
+    <Sequence sap2010:Annotation.AnnotationText="Aquí se verificará si la operación indicada es compatible con la información de la base de datos. Si in_operacion es True se interpretará como INSERT, y si in_operacion es False se interpretará como UPDATE. &#xA;&#xA;Debido a ésto, si in_operacion es True la URL a insertar no debe existir, y si in_operacion es false la URL  a modificar debe existir. Cualquier otro caso será interpretado como InvalidArgumentException." DisplayName="Comprobacion de operacion valida" sap:VirtualizedContainerService.HintSize="640,962.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+<<<<<<< HEAD
       <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="500,724.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
         <ui:IfElseIf.ConditionBlocks>
           <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
             <ui:IfElseIfBlock BlockType="If" Condition="[in_operacion and  (urlEnbaseDeDatos.RowCount &gt; 0)]">
+=======
+      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="500,726.4" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+        <ui:IfElseIf.ConditionBlocks>
+          <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+            <ui:IfElseIfBlock BlockType="If" Condition="[in_operacion and  urlEnbaseDeDatos.RowCount &gt; 0]">
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
               <ui:IfElseIfBlock.Then>
                 <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="449.6,202.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
@@ -271,7 +393,11 @@ WHERE url_clip = '"+in_clip_url+"';"]</InArgument>
                 </Sequence>
               </ui:IfElseIfBlock.Then>
             </ui:IfElseIfBlock>
+<<<<<<< HEAD
             <ui:IfElseIfBlock BlockType="ElseIf" Condition="[(not in_operacion) and urlEnbaseDeDatos.RowCount.Equals(0)]">
+=======
+            <ui:IfElseIfBlock BlockType="ElseIf" Condition="[(in_operacion = False ) And urlEnbaseDeDatos.RowCount = 0]">
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
               <ui:IfElseIfBlock.Then>
                 <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="449.6,202.4" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
@@ -287,6 +413,7 @@ WHERE url_clip = '"+in_clip_url+"';"]</InArgument>
         </ui:IfElseIf.ConditionBlocks>
       </ui:IfElseIf>
     </Sequence>
+<<<<<<< HEAD
     <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="686.4,874.4" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="651.2,796" sap2010:WorkflowViewState.IdRef="Sequence_16">
@@ -296,11 +423,23 @@ WHERE url_clip = '"+in_clip_url+"';"]</InArgument>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Sequence DisplayName="Realizar transaccion en base de datos" sap:VirtualizedContainerService.HintSize="588.8,684" sap2010:WorkflowViewState.IdRef="Sequence_3">
+=======
+    <Sequence DisplayName="Realizar transaccion en base de datos" sap:VirtualizedContainerService.HintSize="640,1060" sap2010:WorkflowViewState.IdRef="Sequence_18">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If Condition="[in_operacion]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="526.4,948" sap2010:WorkflowViewState.IdRef="If_1">
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="492.8,473.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+<<<<<<< HEAD
             <If Condition="[in_operacion]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="526.4,572" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="492.8,194.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
@@ -339,5 +478,45 @@ WHERE url_clip = '"+in_clip_url+"';"]</InArgument>
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
+=======
+            <Sequence DisplayName="INSERT" sap:VirtualizedContainerService.HintSize="449.6,384" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[registrosAffectados]" CommandType="Text" DisplayName="Ejecutar comando" ExistingDbConnection="[io_database]" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" Sql="INSERT Into auronplay&#xA;           (broadcaster_name&#xA;           ,broadcaster_id&#xA;           ,url_clip&#xA;           ,title_clip&#xA;           ,creator_name&#xA;           ,created_at&#xA;           ,titulo_youtube&#xA;           ,description_youtube&#xA;           ,timestamp_mp4&#xA;           ,descargado&#xA;           ,subido_youtube&#xA;           ,video_eliminado)&#xA;VALUES (&#xA;  'auronplay',&#xA;  1234567890,&#xA;  'https://www.twitch.tv/auronplay/clip/looool',&#xA;  'Clip de Auronplay',&#xA;  'Auronplay',&#xA;  '2023-09-04T19:10:35Z', &#xA;  'Auronplay en Twitch',&#xA;  'Clip de Auronplay',&#xA;  '2023-09-06T19:39:58',&#xA;  0,&#xA;  0,&#xA;  0&#xA;)">
+                <ui:ExecuteNonQuery.Parameters>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:ExecuteNonQuery.Parameters>
+              </ui:ExecuteNonQuery>
+              <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Operación de inserción exitosa: &quot;+registrosAffectados.ToString+&quot; registros afectados&quot;]" />
+            </Sequence>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap:VirtualizedContainerService.HintSize="492.8,291.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="UPDATE" sap:VirtualizedContainerService.HintSize="449.6,201.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[registrosAffectados]" CommandType="Text" DisplayName="Ejecutar comando" ExistingDbConnection="[io_database]" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2" Sql="UPDATE auronplay&#xA;Set&#xA;    [title_clip] = 'Dino',&#xA;    [creator_name] = 'Nuevo creador',&#xA;    [created_at] = '2023-09-05T12:00:00Z',&#xA;    [titulo_youtube] = 'Nuevo título de YouTube',&#xA;    [description_youtube] = 'Nueva descripción de YouTube',&#xA;    [timestamp_mp4] = '2023-09-05T12:30:00Z',&#xA;    [descargado] = 1, &#xA;    [subido_youtube] = 1, &#xA;    [video_eliminado] = 1 &#xA;Where  [url_clip] = 'https://www.twitch.tv/auronplay/clip/looool'">
+                <ui:ExecuteNonQuery.Parameters>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:ExecuteNonQuery.Parameters>
+              </ui:ExecuteNonQuery>
+            </Sequence>
+          </Sequence>
+        </If.Else>
+      </If>
+    </Sequence>
+>>>>>>> 90bcfc2dc92a3bb2900c1f092a4e1bdcf6532a97
   </Sequence>
 </Activity>
